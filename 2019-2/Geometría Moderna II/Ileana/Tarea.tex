@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage{pgf,tikz}
+\usepackage{makeidx}
+\usetikzlibrary{arrows}
+\usepackage{multicol}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\voffset=-2 cm
+\hoffset=-3 cm
+\textwidth=20 cm
+\textheight=22 cm
+
+
+\theoremstyle{definition}
+\newtheorem{teo}{\textcolor{red}{Teorema}}[section]
+\newtheorem{df}[teo]{\textcolor{cyan}{Definición}}
+\newtheorem{ej}[teo]{\textcolor{red}{Ejercicio}}
+\newtheorem{prop}[teo]{\textcolor{red}{Proposición}}
+\newtheorem{lema}[teo]{\textcolor{red}{Lema}}
+\newtheorem{cor}[teo]{\textcolor{red}{Corolario}}
+\newtheorem{obs}[teo]{\textcolor{purple}{Observación}}
+\newtheorem{ejp}[teo]{\textcolor{purple}{Ejemplo}}
+
+\newenvironment{pba}{\noindent\textbf{\textcolor{blue}{Prueba:}}}{\begin{flushright}
+$\square$ \end{flushright}}
+\newenvironment{dem}{\noindent\textbf{\textcolor{blue}{Demostración}:}}{\begin{flushright}
+\rule{1ex}{1ex} \end{flushright}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+\title{Tarea 1 \\ Geometría Moderna II}
+\date{\today}
+
+\begin{document}
+
+ \maketitle
+
+1.- Dadas $C(A, \alpha)$ y $C(B, \beta)$ tales que $A \neq B$ y $\forall X \in C(A, \alpha), |BX| > \beta$, construir una recta tangente a estas.
+
+\vspace{1cm}
+
+2.- Dada $C(A, \alpha)$ y $l$ un recta, ¿se puede encontrar otra circunferencia tal que $l$ sea eje radical de ambas? ¿siempre se puede? ¿cuántas circunferencias se pueden encontrar?
+
+\vspace{1cm}
+
+3.- Sea $\Gamma$ una familia de circunferencias coaxiales. Demostrar que $\forall P$ en el plano, $\exists C(A, \alpha) \in \Gamma$ tal que $P \in C(A, \alpha)$. 
+\end{document}

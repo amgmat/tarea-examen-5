@@ -1,0 +1,109 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-3cm
+\textwidth = 19.5cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Moderna II}}
+\fancyhead[LE,RO]{\bfseries{2019-2}}
+\fancyfoot[RE,RO]{\bfseries{Febrero 2019}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 01}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para al Evaluación Parcial 01}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large EXAMEN PARCIAL 01 \\ VIERNES
+08-MARZO-2019\\ De 19:00 a 21:00 HORAS - Salón P-108}}
+\end{center}
+
+
+\begin{center}
+\textcolor{purple}{\textbf{\large Razón cruzada, hileras  y haces armónicos}}
+\end{center}
+
+\begin{enumerate}
+
+\item Demostrar que si en un haz armónico un par de rectas conjugadas es perpendicular una a la otra entonces estas rectas bisecan los ángulos formados por las otras dos.
+
+\item Sean $a,b,c$ y $d$ cuatro rectas en el plano tales que $a\cap b \cap c \cap d =\{O\}$. Demostrar que si uno de los pares de rectas biseca a los ángulos formados por el otro par entonces el haz es armónico.
+
+\item Sea $O$ un punto en el plano, $r \in \R^+$ y consideremos a $\zeta (O,r)$. Demostrar que si $l$ y $m$ dos rectas en el plano tales que $l \cap m = \{O\}$; $l \cap \zeta(O,r) = \{A,B\}$ y $m \cap \zeta(O,r) = \{C,D\}$ entonces cualquier par de conjugados armónicos de $A$ y $B$ y cualquier par de conjugados armónicos de $C$ y $D$ pertenecen a una misma circunferencia.
+
+\item Sea $\triangle ABC$ una triángulo y $L \in \overline{BC}$, $M \in \overline{CA}$ y $N \in \overline{AB}$ tales que $BL=LC$, $CM=MA$ y $AN=NB$. Demostrar que $L\{\overline{LM},\overline{LN};\overline{LA},\overline{LB}\}=-1$.
+
+\item Sea $\triangle ABC$, $b_A$ la bisectriz del \'angulo con v\'ertice $A$ y $b_a \cap \overline{BC}=\{P\}$; $Q$ y $R$ son los pies de las perpendiculares desde $B$ y $C$ sobre $b_a$ respectivamente. Demostrar que $b_a\{A,P;Q,R\}= -1$.
+
+\item Sean $O$ un punto en el plano, $r \in \R^+$. $\zeta (O,r)$ una circunferencia en el plano, $l$ y $m$ dos rectas tangentes a $\zeta(O,r)$ por $L$ y $M$ respectivamente. Demostrar que si $m \cap l = \{A\} $ y  $\overline{OA} \cap \zeta(O,r)=\{B,C\}$ entonces $A$ y $M$ están separados armónicamente por los puntos de intersección de $\overline{LB}$ y $\overline{LC}$ con $\overline{AM}$.
+
+\item Construir
+\begin{enumerate}
+\item Un cuadrángulo completo que tenga un triángulo dado como triángulo diagonal.
+\item Un cuadrilátero completo que tenga un trilátero dado como trilátero diagonal.
+\end{enumerate}
+                                                           
+\item Demostrar que cada uno de los triángulos cuyos lados son tres de las cuatro rectas de un cuadrilátero completo están en perspectiva con el triángulo diagonal del cuadrilátero.
+
+\begin{center}
+\textcolor{purple}{\textbf{\large Circunferencias coaxiales}}
+\end{center}
+
+\item Considerar $\zeta(A, \alpha)$, $\zeta(B,\beta)$ y $k \in \R$. Determinar el lugar geométrico de los puntos $X$ en al plano tales que:
+\begin{enumerate}
+\item $Pot_{\zeta(A,\alpha)} (X)=k$
+\item $Pot_{\zeta(A,\alpha)} (X) + Pot_{\zeta(B,\beta)} (X)=k$
+\item $Pot_{\zeta(A,\alpha)} (X) - Pot_{\zeta(B,\beta)} (X)=k$
+\item $\frac{Pot_{\zeta(A,\alpha)} (X)}{Pot_{\zeta(B,\beta)} (X)}=k$
+\end{enumerate}
+
+\item Sean $\zeta(A, \alpha)$, $\zeta(B, \beta)$ circunferencias tales que $A \neq B$ y para cualquier $X \in \zeta(A, \alpha)$ se tiene que $\beta < |BX|$. Construir una recta tangente a $\zeta(A, \alpha)$ y $\zeta(B, \beta)$.
+
+\item Sea $\Gamma$ una familia de circunferencias coaxiales.
+\begin{enumerate}
+\item Demostrar que para cualquier $P$ en el plano existe $\zeta(A, \alpha) \in \Gamma$ y $\zeta(B,\beta) \in \Gamma^\bot$ tal que \break $P \in \zeta(A, \alpha) \cap \zeta(B,\beta)$.
+\item Construir un elemento de $\Gamma$ que sea tangente a una recta dada distinta del eje radical de $\Gamma$.
+\item Construir un elemento de $\Gamma$ que sea tangente a una circunferencia dada que no pertenece a $\Gamma \cup \Gamma^\bot$.
+\end{enumerate}
+
+\item Sea $\Gamma$ una familia de circunferencias coaxiales y $\zeta(A, \alpha) \notin \Gamma$. Demostrar que los ejes radicales de $\zeta (A, \alpha)$ y cada circunferencia de $\Gamma$ son rectas concurrentes.
+
+\item Sea $\Gamma$ la familia de circunferencias coaxiales determinada por las circunferencias $\zeta(A, \alpha)$, $\zeta(B, \beta)$. Demostrar que si $\zeta(A, \alpha)$, $\zeta(B, \beta)$ tienen como tangente a la recta $l$, $l \cap \zeta(A, \alpha) = \{P\}$ y $l \cap \zeta(B, \beta) = \{Q\}$ entonces para cualquier $\zeta(X,r) \in \Gamma$ se tiene que los elementos de $\zeta(X,r) \cap l$ son conjugados armónicos respecto a $P$ y $Q$.
+
+\item Sean $\{A,B,C\}$ un conjunto de puntos en posición general, $\{\alpha, \beta, \gamma\}\subseteq \R$ tales que $\zeta(A, \alpha)$, $\zeta(B, \beta)$ y $\zeta(C, \gamma)$ son circunferencias que no se intersecan por pares. Demostrar que los puntos seis puntos límite de las tres familias de circunferencias coaxiales que determinan por pares forman un conjunto concíclico de puntos.
+
+\end{enumerate}
+
+\end{document}
