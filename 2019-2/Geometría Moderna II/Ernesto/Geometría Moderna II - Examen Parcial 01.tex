@@ -1,82 +1,104 @@
-\documentclass[10pt]{report}
+\documentclass[12pt]{report}
 
 \usepackage{amssymb,amsmath}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[spanish,mexico]{babel}
 
 \usepackage{iwona}
 
 \voffset=-3cm
-\hoffset=-3.5 cm
-\textwidth=19 cm
-\textheight=30 cm
+\hoffset=-3cm
+\textwidth=20 cm
+\textheight=26 cm
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
 
 \begin{document}
 
 \begin{center}
-\textbf{\LARGE {GEOMETRÕA MODERNA I}}
+\textbf{\LARGE {GEOMETR√çA MODERNA II}}
 \end{center}
 
 \begin{center}
-\textbf{{\large 2019-1 (21 noviembre 2018)}}
+\textbf{{\large 2019-2 (08 marzo 2019)}}
 \end{center}
 
 \begin{center}
-\textbf{{\large EXAMEN PARCIAL 04}}
+\textbf{{\large EXAMEN PARCIAL 01}}
 \end{center}
 
-{\bf INSTRUCCIONES:} Justificar y argumentar todos los resultados que se realicen. Resolver ˙nicamente cuatro ejercicios, de entregar m·s de cuatro ejercicios se anular· el ejercicio de mayor puntaje.
+{\bf INSTRUCCIONES:} Justificar y argumentar todos los resultados que se realicen. Resolver √∫nicamente cuatro ejercicios, de entregar m√°s de cuatro ejercicios se anular√° el ejercicio de mayor puntaje.
 
 \begin{enumerate}
 
-\item Sean $l$ y $m$ un par de rectas paralelas distintas. Encontrar el punto medio de $A$ y $B$ para cualquier $\{A,B\}\subseteq l$ con el uso de solamente regla.
+%\item Sea $O$ un punto en el plano, $r \in \R^+$ y consideremos a $\zeta (O,r)$. Demostrar que si $l$ y $m$ dos rectas en el plano tales que $l \cap m = \{O\}$; $l \cap \zeta(O,r) = \{A,B\}$ y $m \cap \zeta(O,r) = \{C,D\}$ entonces cualquier par de conjugados arm√≥nicos de $A$ y $B$ y cualquier par de conjugados arm√≥nicos de $C$ y $D$ pertenecen a una misma circunferencia.
 
-\item Demostrar que dado $\triangle ABC$ si $P\in \overline{BC}$, $Q\in\overline{CA}$, $R\in\overline{AB}$ tales que $\overline{AP}\cap\overline{BQ}\cap\overline{CR}=\{O\}$ y $\overline{QR}\cap\overline{BC}=\{D\}$, $\overline{RP}\cap\overline{CA}=\{E\}$ y $\overline{PQ}\cap\overline{AB}=\{F\}$ entonces $D$, $E$ y $F$ son colineales. 
+\item Sea $\triangle ABC$; $h_X$ la altura por $X \in \{A,B,C\}$. Demostrar que si $h_A \cap \overline{BC}=\{D\}$, $h_B \cap \overline{CA}=\{E\}$ y $h_c \cap \overline{AB}=\{F\}$ entonces $D\{E,F;A,B\} = -1$.
 
-\item Demostrar que si $\zeta(I,r)$ es la circunferencia inscrita al $\triangle ABC$ y $\zeta(I,r) \cap\overline{BC}=\{P\}$, $\zeta(I,r)\cap\overline{CA}=\{Q\}$ y \break $\zeta(I,r)\cap\overline{AB}=\{R\}$ entonces $\overline{AP}$, $\overline{BQ}$ y $\overline{CR}$ son rectas concurrentes.
+%\item Sean $\zeta(A, \alpha)$, $\zeta(B, \beta)$ circunferencias con $A \neq B$. Construir el eje radical de $\zeta(A, \alpha)$ y $\zeta(B, \beta)$ sin usar de $A$, $B$ y $\overline{AB}$.
 
-\item Sean $\triangle ABC$ y $\zeta (R,r)$ una circunferencia tal que $\zeta (R,r)\cap\overline{BC}=\{P,P'\}$,  $\zeta (R,r) \cap \overline{CA}=\{Q,Q'\}$, $ \zeta (R,r) \cap \overline{AB}=\{R,R'\}$. Si $\overline{AP}\cap \overline{BQ} \cap \overline{CR}\neq \emptyset$ entonces $\overline{AP'}\cap \overline{BQ'} \cap \overline{CR'}\neq \emptyset$
+\item Sea $\Gamma$ una familia de circunferencias coaxiales. Demostrar que para cualquier punto $P$ en el plano existe $\zeta(A, \alpha) \in \Gamma$ y $\zeta(B,\beta) \in \Gamma^\bot$ tal que $P \in \zeta(A, \alpha) \cap \zeta(B,\beta)$.
+ 
 
-\item Sea $\zeta(O,r)$ una circunferencia y $\{A,B,C,D,E,F\} \subseteq \zeta(O,r)$ ordenados sobre ella (levÛgiramente o dextrÛgiramente). Demostrar que la intersecciÛn de los lados opuestos de hex·gono $ABCDEF$ inscrito en $\zeta(O,r)$ son tres puntos colineales.
+\item Sean $\zeta(A,\alpha)$ y $\zeta(B,\beta)$ circunferencias con $A \neq B$ cuyo eje radical es la recta $l$. Demostrar que para cualquier $C \in l$ si $m$ y $n$ son rectas tales que $m \cap n = \{C\}$ y $m \cap \zeta(A, \alpha) = \{P,Q\}$ y $n \cap \zeta(B, \beta) = \{R,S\}$ entonces $\{P,Q,R,S\}$ es un conjunto conc√≠clico de puntos.
 
-\textbf{Sugerencia}: Considerar a $\overline{AB}\cap\overline{CD}=\{P\}$, $\overline{CD}\cap\overline{EF}=\{Q\}$ y $\overline{EF}\cap\overline{AB}=\{R\}$.
+\item Demostrar que si $\{A,B,C\}$ es un conjunto de puntos en posici√≥n general y $\{\alpha, \beta,\gamma\} \subseteq \R$ entonces existe una circunferencia ortogonal a $\zeta(A,\alpha)$, $\zeta(B,\beta)$ y $\zeta(C,\gamma)$ simult√°neamente.
 
-\item Encontrar la recta que contiene a un punto $P$ del plano y al punto de intersecciÛn de dos rectas dadas sin tener acceso al punto de intersecciÛn con el uso de solamente regla. 
+\item Sea $\Gamma$ una familia de circunferencias coaxiales y $\zeta(A, \alpha) \notin \Gamma$. Demostrar que los ejes radicales de $\zeta (A, \alpha)$ y cada circunferencia de $\Gamma$ son rectas concurrentes.
+
+%\item Sean $\{A,B,C\}$ un conjunto de puntos en posici√≥n general, $\{\alpha, \beta, \gamma\}\subseteq \R$ tales que $\zeta(A, \alpha)$, $\zeta(B, \beta)$ y $\zeta(C, \gamma)$ son circunferencias que no se intersecan por pares. Demostrar que los puntos seis puntos l√≠mite de las tres familias de circunferencias coaxiales que determinan por pares forman un conjunto conc√≠clico de puntos.
+
 
 \end{enumerate}
 
-\vspace{3cm}
+\vspace{2cm}
+
 
 \begin{center}
-\textbf{\LARGE {GEOMETRÕA MODERNA I}}
+\textbf{\LARGE {GEOMETR√çA MODERNA II}}
 \end{center}
 
 \begin{center}
-\textbf{{\large 2019-1 (21 noviembre 2018)}}
+\textbf{{\large 2019-2 (08 marzo 2019)}}
 \end{center}
 
 \begin{center}
-\textbf{{\large EXAMEN PARCIAL 04}}
+\textbf{{\large EXAMEN PARCIAL 01}}
 \end{center}
 
-{\bf INSTRUCCIONES:} Justificar y argumentar todos los resultados que se realicen. Resolver ˙nicamente cuatro ejercicios, de entregar m·s de cuatro ejercicios se anular· el ejercicio de mayor puntaje.
+{\bf INSTRUCCIONES:} Justificar y argumentar todos los resultados que se realicen. Resolver √∫nicamente cuatro ejercicios, de entregar m√°s de cuatro ejercicios se anular√° el ejercicio de mayor puntaje.
 
 \begin{enumerate}
 
-\item Sean $l$ y $m$ un par de rectas paralelas distintas. Encontrar el punto medio de $A$ y $B$ para cualquier $\{A,B\}\subseteq l$ con el uso de solamente regla.
+%\item Sea $O$ un punto en el plano, $r \in \R^+$ y consideremos a $\zeta (O,r)$. Demostrar que si $l$ y $m$ dos rectas en el plano tales que $l \cap m = \{O\}$; $l \cap \zeta(O,r) = \{A,B\}$ y $m \cap \zeta(O,r) = \{C,D\}$ entonces cualquier par de conjugados arm√≥nicos de $A$ y $B$ y cualquier par de conjugados arm√≥nicos de $C$ y $D$ pertenecen a una misma circunferencia.
 
-\item Demostrar que dado $\triangle ABC$ si $P\in \overline{BC}$, $Q\in\overline{CA}$, $R\in\overline{AB}$ tales que $\overline{AP}\cap\overline{BQ}\cap\overline{CR}=\{O\}$ y $\overline{QR}\cap\overline{BC}=\{D\}$, $\overline{RP}\cap\overline{CA}=\{E\}$ y $\overline{PQ}\cap\overline{AB}=\{F\}$ entonces $D$, $E$ y $F$ son colineales. 
+\item Sea $\triangle ABC$; $h_X$ la altura por $X \in \{A,B,C\}$. Demostrar que si $h_A \cap \overline{BC}=\{D\}$, $h_B \cap \overline{CA}=\{E\}$ y $h_c \cap \overline{AB}=\{F\}$ entonces $D\{E,F;A,B\} = -1$.
 
-\item Demostrar que si $\zeta(I,r)$ es la circunferencia inscrita al $\triangle ABC$ y $\zeta(I,r) \cap\overline{BC}=\{P\}$, $\zeta(I,r)\cap\overline{CA}=\{Q\}$ y \break $\zeta(I,r)\cap\overline{AB}=\{R\}$ entonces $\overline{AP}$, $\overline{BQ}$ y $\overline{CR}$ son rectas concurrentes.
+%\item Sean $\zeta(A, \alpha)$, $\zeta(B, \beta)$ circunferencias con $A \neq B$. Construir el eje radical de $\zeta(A, \alpha)$ y $\zeta(B, \beta)$ sin usar de $A$, $B$ y $\overline{AB}$.
 
-\item Sean $\triangle ABC$ y $\zeta (R,r)$ una circunferencia tal que $\zeta (R,r)\cap\overline{BC}=\{P,P'\}$,  $\zeta (R,r) \cap \overline{CA}=\{Q,Q'\}$, $ \zeta (R,r) \cap \overline{AB}=\{R,R'\}$. Si $\overline{AP}\cap \overline{BQ} \cap \overline{CR}\neq \emptyset$ entonces $\overline{AP'}\cap \overline{BQ'} \cap \overline{CR'}\neq \emptyset$
+\item Sea $\Gamma$ una familia de circunferencias coaxiales. Demostrar que para cualquier punto $P$ en el plano existe $\zeta(A, \alpha) \in \Gamma$ y $\zeta(B,\beta) \in \Gamma^\bot$ tal que $P \in \zeta(A, \alpha) \cap \zeta(B,\beta)$.
+ 
 
-\item Sea $\zeta(O,r)$ una circunferencia y $\{A,B,C,D,E,F\} \subseteq \zeta(O,r)$ ordenados sobre ella (levÛgiramente o dextrÛgiramente). Demostrar que la intersecciÛn de los lados opuestos de hex·gono $ABCDEF$ inscrito en $\zeta(O,r)$ son tres puntos colineales.
+\item Sean $\zeta(A,\alpha)$ y $\zeta(B,\beta)$ circunferencias con $A \neq B$ cuyo eje radical es la recta $l$. Demostrar que para cualquier $C \in l$ si $m$ y $n$ son rectas tales que $m \cap n = \{C\}$ y $m \cap \zeta(A, \alpha) = \{P,Q\}$ y $n \cap \zeta(B, \beta) = \{R,S\}$ entonces $\{P,Q,R,S\}$ es un conjunto conc√≠clico de puntos.
 
-\textbf{Sugerencia}: Considerar a $\overline{AB}\cap\overline{CD}=\{P\}$, $\overline{CD}\cap\overline{EF}=\{Q\}$ y $\overline{EF}\cap\overline{AB}=\{R\}$.
+\item Demostrar que si $\{A,B,C\}$ es un conjunto de puntos en posici√≥n general y $\{\alpha, \beta,\gamma\} \subseteq \R$ entonces existe una circunferencia ortogonal a $\zeta(A,\alpha)$, $\zeta(B,\beta)$ y $\zeta(C,\gamma)$ simult√°neamente.
 
-\item Encontrar la recta que contiene a un punto $P$ del plano y al punto de intersecciÛn de dos rectas dadas sin tener acceso al punto de intersecciÛn con el uso de solamente regla. 
+\item Sea $\Gamma$ una familia de circunferencias coaxiales y $\zeta(A, \alpha) \notin \Gamma$. Demostrar que los ejes radicales de $\zeta (A, \alpha)$ y cada circunferencia de $\Gamma$ son rectas concurrentes.
+
+%\item Sean $\{A,B,C\}$ un conjunto de puntos en posici√≥n general, $\{\alpha, \beta, \gamma\}\subseteq \R$ tales que $\zeta(A, \alpha)$, $\zeta(B, \beta)$ y $\zeta(C, \gamma)$ son circunferencias que no se intersecan por pares. Demostrar que los puntos seis puntos l√≠mite de las tres familias de circunferencias coaxiales que determinan por pares forman un conjunto conc√≠clico de puntos.
+
 
 \end{enumerate}
+
+
 
 \end{document}
