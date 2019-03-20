@@ -1,0 +1,365 @@
+\documentclass[12pt]{beamer}
+\usepackage{graphicx,url}
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usetheme{Berlin}
+
+
+\usepackage{latexsym,amssymb,amsfonts,amsmath}
+\usepackage{amsthm}
+\usepackage{verbatim}
+\usepackage{paralist}
+\usepackage{graphics}
+\usepackage[all]{xy}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\xyoption{color}
+\xyoption{dvips}
+\xyoption{all}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\theoremstyle{definition}
+\newenvironment{teo}{\begin{block}{\textbf{Teorema}}}{\end{block}}
+\newenvironment{prop}{\begin{block}{\textbf{Proposición}}}{\end{block}}
+\newenvironment{preg}{\begin{block}{\textbf{Pregunta}}}{\end{block}}
+\newenvironment{lema}{\begin{block}{\textbf{Lema}}}{\end{block}}
+\newenvironment{cor}{\begin{block}{\textbf{Corolario}}}{\end{block}}
+\newenvironment{df}{\begin{exampleblock}{\textbf{Definición}}}{\end{exampleblock}}
+\newenvironment{ej}{\begin{exampleblock}{\textbf{Ejemplo}}}{\end{exampleblock}}
+\newenvironment{obs}{\begin{alertblock}{\textbf{Observación}}}{\end{alertblock}}
+
+\newenvironment{pba}{\noindent\textbf{Prueba:}}{\begin{flushright} $\square$
+\end{flushright}}
+\newenvironment{dem}{\noindent\textbf{Demostración:}}{\begin{flushright}
+\rule{1ex}{1ex} \end{flushright}}
+\newenvironment{sol}{\noindent\textbf{Solución:}}{\begin{flushright} $\square$
+\end{flushright}}
+
+\setbeamertemplate{prop}[chapter]
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+
+\title[Examen Parcial 01]{Examen Parcial 01}
+\author[Ernesto Vázquez \& Ileana González]{Ernesto A. Vázquez Navarro \\ Ileana A. González Escalante}
+\institute[FC UNAM]{Geometría Moderna II \\ Semestre 2019-2 \\ \vspace{0.5cm} Facultad de Ciencias \\ Universidad Nacional Autónoma de México}
+\date{Presentación del examen: 08 de marzo de 2019}
+
+\begin{document}
+
+%%%1
+\begin{frame}
+\titlepage
+\end{frame}
+
+%%%2
+\begin{frame}
+\begin{preg}[1]
+Sean $\triangle ABC$ y $h_X$ la altura por $X \in \{A,B,C\}$. Demostrar que si $h_A \cap \overline{BC}=\{D\}$, $h_B \cap \overline{CA}=\{E\}$ y $h_C \cap \overline{AB}=\{F\}$ entonces $D\{\overline{DE},\overline{DF};\overline{DA},\overline{DB}\} = -1$.
+\end{preg}
+\pause 
+
+\begin{dem}
+Dado que $|\angle BDH| = |\angle BFH| = \bot$ y $|\angle BEA| = |\angle BDA| = \bot$ se tiene que $\{B,D,H,F\}$ y $\{B,D,E,A\}$ son conjuntos concíclicos de puntos.
+\pause
+
+Así, $|\angle HDF| = |\angle HBF|$ y $|\angle EBA| = |\angle EDA|$ \pause (subtienden el mismo arco en cada circunferencia que los contiene).
+\pause 
+
+Como $\{E,H,B\} \subseteq \overline{EH}$ y $\{A, F, B\} \subseteq \overline{AB}$ se tiene que
+$$|\angle EDA| = |\angle EBA| = |\angle HBF| = |\angle HDF| = |\angle ADF|$$
+\pause
+es decir, $|\angle EDA| = |\angle ADF|$
+\vspace{2cm}
+\end{dem}
+\end{frame}
+
+\begin{frame}
+\begin{preg}[1]
+Sean $\triangle ABC$ y $h_X$ la altura por $X \in \{A,B,C\}$. Demostrar que si $h_A \cap \overline{BC}=\{D\}$, $h_B \cap \overline{CA}=\{E\}$ y $h_C \cap \overline{AB}=\{F\}$ entonces $D\{\overline{DE},\overline{DF};\overline{DA},\overline{DB}\} = -1$.
+\end{preg}
+
+\begin{dem}
+$|\angle EDA| = |\angle ADF|$.
+\pause 
+
+Notemos que
+\begin{eqnarray*}
+\angle( \overline{DE} \rightarrow \overline{DB}) &=& \angle (\overline{DE} \rightarrow \overline{DA}) + \angle( \overline{DA} \rightarrow \overline{DB})\\
+&=& \angle (\overline{DE} \rightarrow \overline{DA}) + \bot\\
+\pause
+\angle(\overline{DB} \rightarrow \overline{DF}) &=& \angle (\overline{DB} \rightarrow \overline{DA}) - \angle(\overline{DA} \rightarrow \overline{DF})\\
+&=& \bot - \angle (\overline{DE} \rightarrow \overline{DA})\\
+&=& - (\angle (\overline{DE} \rightarrow \overline{DA})-\bot)
+\end{eqnarray*}
+\vspace{2cm}
+\end{dem}
+\end{frame}
+
+\begin{frame}
+\begin{preg}[1]
+Sean $\triangle ABC$ y $h_X$ la altura por $X \in \{A,B,C\}$. Demostrar que si $h_A \cap \overline{BC}=\{D\}$, $h_B \cap \overline{CA}=\{E\}$ y $h_C \cap \overline{AB}=\{F\}$ entonces $D\{\overline{DE},\overline{DF};\overline{DA},\overline{DB}\} = -1$.
+\end{preg}
+
+\begin{dem}
+$|\angle EDA| = |\angle ADF|$.
+\begin{eqnarray*}
+\angle( \overline{DE} \rightarrow \overline{DB}) &=& \angle (\overline{DE} \rightarrow \overline{DA}) + \bot\\
+\angle(\overline{DB} \rightarrow \overline{DF}) &=& - (\angle (\overline{DE} \rightarrow \overline{DA})-\bot)
+\end{eqnarray*}
+\pause
+
+Por lo tanto
+\begin{eqnarray*}
+D\{\overline{DE}, \overline{DF} ; \overline{DA}, \overline{DB}\} &=& \frac{\frac{\sen (\angle (\overline{DE} \rightarrow \overline{DA}))}{\sen (\angle (\overline{DA} \rightarrow \overline{DF}))}}{\frac{\sen (\angle (\overline{DE} \rightarrow \overline{DB}))}{\sen (\angle (\overline{DB} \rightarrow \overline{DF}))}} \pause = \frac{\frac{\sen (\angle EDA)}{\sen (\angle ADF)}}{\frac{\sen (\angle (\overline{DE} \rightarrow \overline{DA}) + \bot)}{\sen (- (\angle (\overline{DE} \rightarrow \overline{DA}) -\bot))}}
+\end{eqnarray*}
+\vspace{2cm}
+\end{dem}
+\end{frame}
+
+
+\begin{frame}
+\begin{preg}[1]
+Sean $\triangle ABC$ y $h_X$ la altura por $X \in \{A,B,C\}$. Demostrar que si $h_A \cap \overline{BC}=\{D\}$, $h_B \cap \overline{CA}=\{E\}$ y $h_C \cap \overline{AB}=\{F\}$ entonces $D\{\overline{DE},\overline{DF};\overline{DA},\overline{DB}\} = -1$.
+\end{preg}
+
+\begin{dem}
+\begin{eqnarray*}
+D\{\overline{DE}, \overline{DF} ; \overline{DA}, \overline{DB}\} &=& \frac{\frac{\sen (\angle EDA)}{\sen (\angle ADF)}}{\frac{\sen (\angle (\overline{DE} \rightarrow \overline{DA}) + \bot)}{\sen (- (\angle (\overline{DE} \rightarrow \overline{DA}) -\bot))}} \pause = -1 
+\end{eqnarray*}
+\pause
+
+(pues $\angle (\overline{DE} \rightarrow \overline{DA}) + \bot$ y $-(\angle (\overline{DE} \rightarrow \overline{DA}) - \bot)$ son suplementarios.
+\pause
+\end{dem}
+\end{frame}
+
+%%%3
+\begin{frame}
+\begin{preg}[2]
+Sea $\Gamma$ una familia de circunferencias coaxiales.
+
+Demostrar que para cualquier punto $P$ en el plano existe $\zeta(A, \alpha) \in \Gamma$ y $\zeta(B,\beta) \in \Gamma^\bot$ tal que $P \in \zeta(A, \alpha) \cap \zeta(B,\beta)$.
+\end{preg}
+\pause
+
+\begin{dem}
+Sea $P$ un punto en el plano.
+
+Consideremos 3 casos: 
+\begin{itemize}
+\item[Caso 1)] $\Gamma$ es una familia de circunferencias que se intersecan en dos puntos.
+\item[Caso 2)] $\Gamma$ es una familia de circunferencias que se intersecan en un punto. 
+\item[Caso 3)] $\Gamma$ es una familia de circunferencias que no se intersecan.
+\end{itemize}
+\vspace{2cm}
+\end{dem}
+\end{frame}
+
+\begin{frame}{Caso 1: $\Gamma$ es una familia de circunferencias que se intersecan en dos puntos.}
+\pause
+
+\begin{dem} Sean $Q$ y $R$ los puntos donde se intersecan las circunferencias de la familia $\Gamma$, $l$ el eje radical de $\Gamma$ y $n$ la línea de los centros de $\Gamma$. 
+\pause
+
+Como $P$ es cualquier punto en el plano, Tenemos que:
+\begin{itemize}
+\item  $\{P, Q, R\}$ \textbf{no} es un conjunto de puntos en posición general. \pause De ser así, $P \in \overline{QR} \pause = l \pause \in \Gamma$.
+\pause
+
+\item $\{P, Q, R\}$ es un conjunto de puntos en posición general. 
+\pause 
+
+Sabemos que existe una única circunferencia que contiene a $\{P,Q,R\}$, a la que llamaremos $\zeta(A, \alpha)$. \pause $\zeta(A, \alpha) \in \Gamma$ pues incide en $Q$ y $R$; además, la línea de los centros de $\Gamma$ es la mediatriz de $Q$ y $R$ entonces $\zeta(A, \alpha)$ tiene centro en $n$.
+\end{itemize}
+\end{dem}
+\end{frame}
+
+\begin{frame}{Caso 1: $\Gamma$ es una familia de circunferencias que se intersecan en dos puntos.}
+\pause
+
+\begin{dem}
+Sólo nos queda encontrar un elemento de $\Gamma^\bot$ que incida en $P$. \pause Si $p$ es la tangente a $\zeta(A, \alpha)$ por $P$, sea $p \cap l = \left\{B \right\}$. 
+\pause
+
+\begin{obs}
+Si $p \cap \textit{l}$  no está en el plano entonces $\{P, A\} \subseteq n$. Así, $p$ es paralela a $l$ y por ende $n$ es ortogonal a $\zeta(A, \alpha)$. Como $n \in \Gamma^\bot$, $n$ cumple lo que buscamos.
+\end{obs}
+\pause
+
+$\zeta(B, |BP|)$, por construcción, es ortogonal a $\zeta(A, \alpha)$ en $P$. \pause Como $\zeta(A, \alpha) \in \Gamma$, $B \in l$ y $\zeta(B, |BP|)$ es ortogonal a $\zeta(A, \alpha)$ se tiene que $\zeta(B, |BP|)$ es ortogonal a todas las circunferencias de $\Gamma$, por lo que $\zeta(B, |BP|) \in \Gamma^\bot$.
+\end{dem}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%11
+\begin{frame}
+\frametitle{Caso 2: $\Gamma$ es una familia de circunferencias tangentes.}
+
+Sea $Q$ el punto donde se intersecan las circunferencias de $\Gamma$, $\textit{l}$ su eje radical y $\textit{n}$ la línea de los centros de las circunferencias en $\Gamma$. 
+
+Trazamos $m_{P, Q}$ la mediatriz de $P$ y $Q$. Sean $m_{P, Q} \cap \textit{l} = \left\lbrace B \right\rbrace$ y $m_{P, Q} \cap \textit{n} = \left\lbrace A \right\rbrace$
+
+\vspace{0.2cm}
+
+\begin{obs}
+Si $m_{P, Q} \cap \textit{l}$ no está en el plano, entonces $P \in \textit{n}$ y si $m_{P, Q} \cap \textit{n}$ no está en el plano, entonces $P \in \textit{l}$
+\end{obs}
+\end{frame}
+
+
+%%%12
+\begin{frame}
+Si $P \in \textit{n}$, entonces $\zeta(A, \alpha) \in \Gamma$ es tal que $A \in \textit{n}$ y $QA = AP$, $\alpha = |PA|$, además, sabemos que $\textit{n} \in \Gamma^\bot$ y además,  $\textit{n}$ es ortogonal a $\zeta(A, \alpha)$ pues es paralela a la línea de los centros de $\Gamma^\bot$.
+
+Y así, se cumple lo que buscamos.
+
+\vspace{0.5cm}
+
+Ahora, si $P \in \textit{l}$, sabemos que $\textit{l} \in \Gamma$ y la $\zeta(B, \beta)$ que buscamos ortogonal a esta es tal que $B \in \textit{l}, \, PB = BQ$ y $\beta = |PB|$y es ortogonal pues es paralela a la línea de los centros de $\Gamma$.
+\end{frame}
+
+
+%%%13
+\begin{frame}
+Si no pasa ninguno de los dos casos anteriores, entonces, $m_{P, Q} \cap \textit{l} = \left\lbrace B \right\rbrace$ y $m_{P, Q} \cap \textit{n} = \left\lbrace A \right\rbrace$ están en el plano. 
+
+\vspace{0.3cm}
+
+Así, trazamos $\zeta(A, \alpha)$, donde $\alpha = |AP|$ y $\zeta(B, \beta)$, donde $\beta = |BP|$ y por construcción $P \in \zeta(B, \beta) \cap \zeta(A, \alpha)$. 
+
+\vspace{0.3cm}
+
+Además, $Q \in \zeta(B,\beta) \cap \zeta(A, \alpha)$, puesto que $\{ B, A\} \subset m_{P,Q}$, así $\zeta(A, \alpha) \in \Gamma$. Y $\overline{BQ}$ es ortogonal a $\overline{QA}$ pues $B \in l$ y $A \in n$, entonces $\zeta(B,\beta)$ es ortogonal a $\zeta(A, \alpha)$. 
+
+\vspace{0.3cm}
+
+Por último, como $B \in l$ y $\zeta(B,\beta)$ es ortogonal a $\zeta(A, \alpha)$, entonces $\zeta(B, \beta) \in \Gamma^\bot$.
+\end{frame}
+
+%%%14
+\begin{frame}
+\frametitle{Caso 3: $\Gamma$ es una familia de circunferencias que no se intersecan.}
+Notemos que si $\Gamma$ es una familia de circunferencias que no se intersecan, entonces $\Gamma^\bot$ es una familia de circunferencias que se intersecan en dos puntos, a saber los puntos límites de $\Gamma$. 
+
+\vspace{0.3cm}
+
+Así, el caso 3 se resuelve de la misma manera que el caso 1.
+
+\vspace{0.5cm}
+
+Por lo tanto, para todo $P$ punto en el plano, existe $\zeta(A, \alpha) \in \Gamma$ y $\zeta(B,\beta) \in \Gamma^\bot$ tal que $P \in \zeta(A, \alpha) \cap \zeta(B,\beta)$. $\, \, \blacksquare$
+\end{frame}
+
+%%%15
+\begin{frame}
+\begin{prop}
+3.- Sean $\zeta(A,\alpha)$ y $\zeta(B,\beta)$ circunferencias con $A \neq B$ cuyo eje radical es la recta $l$. Demostrar que para cualquier $C \in l$ si $m$ y $n$ son rectas tales que $m \cap n = \{C\}$ y $m \cap \zeta(A, \alpha) = \{P,Q\}$ y $n \cap \zeta(B, \beta) = \{R,S\}$ entonces $\{P,Q,R,S\}$ es un conjunto concíclico de puntos.
+\end{prop}
+\end{frame}
+
+
+%%%15
+\begin{frame}
+\begin{pba}
+Como $C \in l$, entonces sabemos que $Pot_{\zeta(A, \alpha)} \, (C) =  Pot_{\zeta(B, \beta)} \, (C)$, así $CP \cdot CQ = CR \cdot CS$.
+
+\vspace{0.3cm}
+
+Entonces, $\frac{CP}{CS} = \frac{CR}{CQ}$, además, $| \angle PCR | = | \angle QCS|$, pues $\left\lbrace C, Q, P \right\rbrace \subset m$ y $\left\lbrace R, S, C \right\rbrace \subset n$, así $\triangle CSQ \cong \triangle CPR$. 
+
+\vspace{0.3cm}
+
+De lo anterior, $|\angle CQS| = |\angle CRP|$, entonces, $|\angle CRP| + |\angle PQS| = 2r$. 
+
+\vspace{0.3cm}
+
+Por lo tanto, $\left\lbrace P,Q,R,S\right\rbrace$ es un conjunto concíclico de puntos.
+\end{pba}
+\end{frame}
+
+
+%%%16
+\begin{frame}
+\begin{prop}
+4.- Demostrar que si $\{A,B,C\}$ es un conjunto de puntos en posición general y $\{\alpha, \beta,\gamma\} \subseteq \R^+$ entonces existe una circunferencia ortogonal a $\zeta(A,\alpha)$, $\zeta(B,\beta)$ y $\zeta(C,\gamma)$ simultáneamente.
+\end{prop}
+\end{frame}
+
+
+%%%17
+\begin{frame}
+Sean $\zeta(A,\alpha)$, $\zeta(B,\beta)$ y $\zeta(C,\gamma)$.
+
+\vspace{0.3cm}
+
+Como $\{A,B,C\}$ es un conjunto de puntos en posición general, entonces sabemos que $\{ \zeta(A,\alpha), \zeta(B,\beta) \} \subset \Gamma_{1}$, $\{ \zeta(B,\beta), \zeta(C,\gamma) \} \subset \Gamma_{2}$ y $\{ \zeta(A,\alpha), \zeta(C,\gamma) \} \subset \Gamma_{3}$, donde estas familias son diferentes a pares. Así sean $l, m$ y $n$ los ejes radicales de $\Gamma_{1}, \Gamma_{2}$ y $\Gamma_{3}$ respectivamente. 
+
+\vspace{0.3cm}
+
+Sea $l \cap m = \{ X \}$, entonces $Pot_{\zeta(A, \alpha)} \, (X) = Pot_{\zeta(B, \beta)} \, (X)$ y $Pot_{\zeta(B, \beta)} \, (X) = Pot_{\zeta(C, \gamma)} \, (X)$, entonces $Pot_{\zeta(A, \alpha)} \, (X) = Pot_{\zeta(C, \gamma)} \, (X)$ y así $X \in n$.
+\end{frame}
+
+
+%%%18
+\begin{frame}
+Ahora, tracemos $t$ la tangente por X a $\zeta(C, \gamma)$ y sea $\{ P \} = \zeta(C, \gamma) \cap t$.
+
+\vspace{0.3cm}
+
+Notemos que $\zeta(X, |XP|)$ es ortogonal a $\zeta(C, \gamma)$ por construcción y además, como $X \in m$, entonces también lo es a las circunferencias de $\Gamma_{2}$, en particular a $\zeta(B, \beta)$.
+
+\vspace{0.3cm}
+
+Además, $\zeta(X, |XP|)$ es ortogonal a $\zeta(B, \beta)$ y además, como $X \in l$, entonces también lo es a las circunferencias de $\Gamma_{1}$, en particular a $\zeta(A, \alpha)$.
+
+\vspace{0.3cm}
+
+Así, $\zeta(X, |XP|)$ cumple ser ortogonal a las tres circunferencias simultáneamente. \, $\blacksquare$
+\end{frame}
+
+
+%%%19
+\begin{frame}
+\begin{prop}
+5.- Sea $\Gamma$ una familia de circunferencias coaxiales y $\zeta(A, \alpha) \notin \Gamma$. Demostrar que los ejes radicales de $\zeta (A, \alpha)$ y cada circunferencia de $\Gamma$ son rectas concurrentes.
+\end{prop}
+\end{frame}
+
+
+%%%20
+\begin{frame}
+\begin{pba}
+Sean $l$ el eje radical de $\Gamma$ y $\zeta(D, \delta) \in \Gamma.$
+
+Como $\zeta(A, \alpha) \notin \Gamma$, entonces sea $m$ el eje radical de  $\zeta(D, \delta) y \zeta(A, \alpha)$. Sea $l \cap m = \{O\}$. 
+
+\vspace{0.3cm}
+
+Como $O \in l$, entonces $Pot_{\zeta(D, \delta)} \, (O) = Pot_{\zeta(P, \rho)} \, (O),$ $\forall \zeta(P, \rho) \in \Gamma$.  Además, como $O \in m$, entonces $Pot_{\zeta(D, \delta)} \, (O) = Pot_{\zeta(A, \alpha)} \, (O)$. 
+
+\vspace{0.3cm}
+
+Así, $Pot_{\zeta(A, \alpha)} \, (O) = Pot_{\zeta(P, \rho)} \, (O), \, \forall \zeta(P, \rho) \in \Gamma$.
+
+Por lo tanto, los ejes radicales de $\zeta (A, \alpha)$ y cada circunferencia de $\Gamma$ inciden en $O$, es decir, son rectas concurrentes.
+\end{pba}
+\end{frame}
+\end{document}
