@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage{pgf,tikz}
+\usepackage{makeidx}
+\usetikzlibrary{arrows}
+\usepackage{multicol}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\voffset=-2 cm
+\hoffset=-3 cm
+\textwidth=20 cm
+\textheight=22 cm
+
+
+\theoremstyle{definition}
+\newtheorem{teo}{\textcolor{red}{Teorema}}[section]
+\newtheorem{df}[teo]{\textcolor{cyan}{Definición}}
+\newtheorem{ej}[teo]{\textcolor{red}{Ejercicio}}
+\newtheorem{prop}[teo]{\textcolor{red}{Proposición}}
+\newtheorem{lema}[teo]{\textcolor{red}{Lema}}
+\newtheorem{cor}[teo]{\textcolor{red}{Corolario}}
+\newtheorem{obs}[teo]{\textcolor{purple}{Observación}}
+\newtheorem{ejp}[teo]{\textcolor{purple}{Ejemplo}}
+
+\newenvironment{pba}{\noindent\textbf{\textcolor{blue}{Prueba:}}}{\begin{flushright}
+$\square$ \end{flushright}}
+\newenvironment{dem}{\noindent\textbf{\textcolor{blue}{Demostración}:}}{\begin{flushright}
+\rule{1ex}{1ex} \end{flushright}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+
+
+\title{Tarea 2 \\
+Geometría Moderna II}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Sean $A$ y $B$ dos puntos en el plano tales que $A \neq B$, $\zeta(A, \alpha)$, $\zeta(B, \beta)$ tales que $\zeta(A, \alpha) \cap \zeta(B, \beta) = \emptyset$ y una no contenga a la otra. También sea $l$ una recta incidente en $A$ y $m$ la recta paralela a $l$ por $B$; $l \cap \zeta(A, \alpha) = \left\lbrace P, Q\right\rbrace$, $m \cap \zeta(B, \beta) = \{ R, S\}$. 
+
+Demostrar: 1) $\overline{PR} \cap \overline{SQ} \cap \overline{AB} \neq \emptyset$. 
+
+2) 1) $\overline{PS} \cap \overline{QR} \cap \overline{AB} \neq \emptyset$ 
+
+3) $n$ es tangente a $\zeta(A, \alpha)$ por alguno de los puntos anteriores $\Leftrightarrow \, n$ es tangente a $\zeta(B, \beta).$
+
+\vspace{0.5cm} 
+
+\item Si $I_{\zeta(P, \rho)} [\zeta(A, \alpha)] = \zeta(B, \beta)$, entonces $\{ \zeta(P, \rho), \zeta(A, \alpha), \zeta(B, \beta) \} \subset \Gamma$, donde $\Gamma$ es la familia de circunferencias generada por $\zeta(A, \alpha), \zeta(B, \beta)$
+
+\vspace{0.5cm} 
+
+\item Si tenemos $\zeta(A, \alpha), \zeta(B, \beta)$ tales que una esté contenida en la otra, entonces ¿qué centro de similitud funciona como centro de $\zeta(P, \rho)$?, donde $I_{\zeta(P, \rho)} [\zeta(A, \alpha)] = \zeta(B, \beta)$
+
+\vspace{0.5cm} 
+
+\item Encontrar $\zeta(P, \rho)$ tal que: $I_{\zeta(P, \rho)} [\zeta(A, \alpha)] = \zeta(C, \gamma)$ y además $I_{\zeta(P, \rho)} [\zeta(B, \beta)] = \zeta(C, \gamma)$
+
+\vspace{0.5cm} 
+
+\item Sean $\zeta(A, \alpha)$ y P un punto en el plano.
+
+Si $I_{\zeta(A, \alpha)} \, (P) = P'$ y $\zeta(A, \alpha) \cap \overline{PP'} = \{ R, S \}$, entonces $\overline{PP'}\{P, P'; R, S\} = -1$ 
+ 
+\vspace{0.5cm} 
+
+\item Si una circunferencia es invertida en una circunferencia, ¿el centro de la primera es invertido en la segunda?
+
+\vspace{0.5cm} 
+
+\item Sean $\{A, P, Q\}$ un conjunto de puntos en posición general, $\zeta(A, \alpha)$, $I_{\zeta(A, \alpha)} \, (P) = P'$ y $I_{\zeta(A, \alpha)} \, (Q) = Q'$. Demostrar que:
+
+1) $\triangle APQ \cong \triangle AP'Q'$.
+
+2) $\{P, P', Q, Q'\} \in \zeta(D, \delta)$, donde $\zeta(D, \delta)$ es ortogonal a $\zeta(A, \alpha).$
+
+\end{enumerate}
+\end{document}

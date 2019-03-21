@@ -112,4 +112,28 @@ only when rendering/.style={
 
 \item Demostrar que la suma conexa de dos nudos $3$-coloreables es un nudo $3$-coloreable.
 \end{enumerate}
+
+
+
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}%[scale=0.75]
+\begin{knot}[consider self intersections=true,
+%flip crossing=1,
+flip crossing=2,
+flip crossing=3,
+flip crossing=5,
+only when rendering/.style={
+}]
+\strand (0,0) .. controls +(-2,2) and +(3,-3) .. (5,5)
+.. controls +(-3,3) and +(-3,0) .. (5,2) 
+.. controls +(-3,3) and +(-3,0) .. (0,0) 
+%.. controls +(4,0) and +(-3,0) .. (-8,-3)
+%.. controls +(3,0) and +(-4,0) .. (-7,2)
+;
+\end{knot}
+\end{tikzpicture}
+\end{figure}
+
+
 \end{document}
