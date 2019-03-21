@@ -1,0 +1,75 @@
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Seminario de Topologia B}}
+\fancyhead[LE,RO]{\bfseries{2019-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2019}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 02}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guia de ejercicios para la evaluación del primer parcial}}
+\end{center}
+
+\begin{enumerate}
+\item Sean $X$, $Y$ y $Z$ espacios topológicos. Consideremos $f,g: X\to Y$ y $\psi ,\varphi: Y \to Z$ funciones continuas entre estos espacios. Demostrar que:
+\begin{enumerate}
+\item Si $f\simeq g$ relativo a $A\subset X$ entonces $\varphi \circ f \simeq \varphi\circ g$ relativo a $A$.
+\item Si $\varphi \simeq \phi$ relativo a $B\subset Y$ entonces $\varphi \circ f \simeq \psi \circ f$ relativo a $f^{-1}[B]$
+\end{enumerate} 
+\item Sean $X$, $Y$ espacios topológicos. Demostrar que si $Y$ es conectable por trayectorias entonces para cualquier $f,g : X\to Y$ funciones continuas nulhomotópicas tenemos que $f\simeq g$.
+\item Demostrar que la relacion $\simeq$ es una relación de equivalencia en la clase de todos los espacios topológicos.
+\item Sean $X$, $Y$ y $Z$ espacios topológicos. Entonces:
+\begin{enumerate}
+\item Demostrar que si $\varphi: (X,x) \to (Y,y)$, $\psi: (Y,y) \to (Z,z)$ son funciones basadas,
+$$(\psi \circ \varphi)_* = \psi_*\circ \varphi_* : \pi(X,x)\to \pi(Z,z)$$
+\item Demostrar que si $Id_X: (X,x)\to (X,x)$ es la identidad en X.
+$$(Id_X)_* = Id_{\pi(X,x)}$$
+\end{enumerate}
+\item Demostrar que si $f,g :X \to \s^2$ son continuas tales que $\forall x\in X,\; f(x)\neq g(x)$ entonces $f\simeq g$.
+\item Sean $X$ un espacio topológico simplemente conexo y $\{x_0,x_1\}\subset X$. Demostar que si $f,g: I \to X$ son dos trayectorias con $f(0)=g(0)=x_0$ y $f(1)=g(1)=x_1$ entonces $f\simeq g$.
+\item Sean $Y$ y $Z$ espacios topológicos y $p: Y \to Z$ una función cubriente. Demostrar que para todo $z\in Z$ el subespacio $p^{-1}(y)$ es un espacio discreto en Y.
+\item Encontrar una función cubriente de $\s^1$ en $\s^1$ que no sea la función identidad.
+\item Demostrar que $\R$ es un espacio cubriente del $\s^1$.
+\item Demostrar que el toro es un espacio cubriente de la botella de Klein.
+
+
+\end{enumerate}
+\end{document}
