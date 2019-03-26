@@ -1,0 +1,98 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-3cm
+\textwidth = 19.5cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Seminario de Topología B}}
+\fancyhead[LE,RO]{\bfseries{2019-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2019}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 02}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para al Evaluación Parcial 02}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large EXAMEN PARCIAL 02 \\ VIERNES
+29-MARZO-2019\\ De 19:00 a 21:00 HORAS - Salón P-108}}
+\end{center}
+
+\begin{enumerate}
+
+\item Sean $(X,\tau_X)$, $(Y,\tau_Y)$ y $(Z, \tau_Z)$ espacios topológicos. Consideremos $f: X \to Y$, $g: X \to Y$, $\varphi: Y \to Z$ y $\psi: Y \to Z$ funciones continuas. Demostrar que:
+\begin{enumerate}
+\item Si $f \simeq g$ relativo a $A \subseteq X$ entonces $\varphi \circ f \simeq \varphi\circ g$ relativo a $A$.
+\item Si $\varphi \simeq \phi$ relativo a $B\subseteq Y$ entonces $\varphi \circ f \simeq \psi \circ f$ relativo a $f^{-1}[B]$
+\end{enumerate}
+
+\item Sean $(X,\tau_X)$ y $(Y,\tau_Y)$ espacios topológicos. Demostrar que si $Y$ es conectable por trayectorias entonces para cualesquiera $f: X \to Y$ y $g : X\to Y$ funciones continuas nulhomotópicas se tiene que $f\simeq g$.
+
+\item Demostrar que la relación de homotopía entre espacios topológicos es una relación de equivalencia en la clase de todos los espacios topológicos.
+
+\item Sean $(X,\tau_X)$, $(Y,\tau_Y)$ y $(Z, \tau_Z)$ espacios topológicos.
+\begin{enumerate}
+\item Demostrar que si $\varphi: (X,x) \to (Y,y)$ y $\psi: (Y,y) \to (Z,z)$ son funciones basadas entonces
+$$(\psi \circ \varphi)_* = \psi_*\circ \varphi_* : \pi(X,x)\to \pi(Z,z)$$
+
+\item Demostrar que si $Id_X: (X,x)\to (X,x)$ es la función identidad en $X$.
+$$(Id_X)_* = Id_{\pi(X,x)}$$
+\end{enumerate}
+
+\item Demostrar que si $(X, \tau_X)$ es un espacio topológico, $f : X \to \s^2$ y $g :X \to \s^2$ son funciones continuas tales que $\forall x\in X,\; f(x)\neq g(x)$ entonces $f\simeq g$.
+
+\item Sean $(X, \tau_X)$ un espacio topológico simplemente conexo y $\{x_0,x_1\} \subseteq X$. Demostrar que si $f: I \to X$ y $g: I \to X$ son dos trayectorias con $f(0)=g(0)=x_0$ y $f(1)=g(1)=x_1$ entonces $f\simeq g$.
+
+\item Sean $(Y,\tau_Y)$ y $(Z, \tau_Z)$ espacios topológicos y $\rho: Y \to Z$ una función cubriente. Demostrar que para todo $z\in Z$ el subespacio $p^{-1}(z)$ es un espacio discreto en $Y$.
+
+\item Encontrar una función cubriente de $\s^1$ en $\s^1$ distinta de la función identidad.
+
+\item Demostrar que $\R$ es un espacio cubriente de $\s^1$.
+
+\item Demostrar que $\R^2$ es un espacio cubriente de la botella de Klein.
+
+\end{enumerate}
+
+\end{document}
