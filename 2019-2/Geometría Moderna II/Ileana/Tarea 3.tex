@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage{pgf,tikz}
+\usepackage{makeidx}
+\usetikzlibrary{arrows}
+\usepackage{multicol}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\voffset=-2 cm
+\hoffset=-3 cm
+\textwidth=20 cm
+\textheight=22 cm
+
+
+\theoremstyle{definition}
+\newtheorem{teo}{\textcolor{red}{Teorema}}[section]
+\newtheorem{df}[teo]{\textcolor{cyan}{Definición}}
+\newtheorem{ej}[teo]{\textcolor{red}{Ejercicio}}
+\newtheorem{prop}[teo]{\textcolor{red}{Proposición}}
+\newtheorem{lema}[teo]{\textcolor{red}{Lema}}
+\newtheorem{cor}[teo]{\textcolor{red}{Corolario}}
+\newtheorem{obs}[teo]{\textcolor{purple}{Observación}}
+\newtheorem{ejp}[teo]{\textcolor{purple}{Ejemplo}}
+
+\newenvironment{pba}{\noindent\textbf{\textcolor{blue}{Prueba:}}}{\begin{flushright}
+$\square$ \end{flushright}}
+\newenvironment{dem}{\noindent\textbf{\textcolor{blue}{Demostración}:}}{\begin{flushright}
+\rule{1ex}{1ex} \end{flushright}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+
+
+\title{Tarea 2 \\
+Geometría Moderna II}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item En un triángulo rectángulo, las mediatrices concurren en el punto medio de la hipotenusa. 
+
+\item Sea $\zeta(O, r)$. Dado $L$ punto en el plano tal que $|LO| > r$, ¿por qué se puede construir el polo trazando las tangentes a $\zeta(O, r)$ por $L$? ¿Cuál es el polo? 
+
+\item  Sea $A$ punto en el plano. Encontrar la polar de $A$ usando únicamente regla.
+
+\item Sea $\zeta(O, r)$ y $A$ un punto en el plano tal que $|OA| > r$. Encontrar las tangentes a $\zeta(O, r)$ por $A$ usando únicamente regla.
+
+\item Sea $\zeta(O, r)$ y $A$ un punto en el plano tal que $|OA| = r$. Encontrar la tangente a $\zeta(O, r)$ por $A$ usando únicamente regla.
+
+\item Sean $\zeta(O, r)$ y $a, b$ dos rectas conjugadas tales que $a \cap b = \{X\}$ y $|XO| > r$. Demostrar que $|a \cap \zeta(O, r)| = 2$ y $|b \cap \zeta(O, r)| = 0$.
+
+\item Encontrar el lugar geométrico de un punto cuyas polares con respecto a dos circunferencias dadas forman un ángulo fijo entre ellas.
+
+\item Sea $ABCD$ un cuadrado y $\zeta(O, r)$. 
+Si $A$ es conjugado de $C$ respecto a $\zeta(O, r)$, entonces $B$ es conjugado de $D$ respecto a $\zeta(O, r)$.
+
+\item Sea $l$ una recta y $L$ un punto en el plano. Encontrar $\zeta(O, r)$ tales que $l$ sea polar de $L$ respecto a $\zeta(O, r)$. ¿Cuántas formas hay de hacerlo?
+
+\item Sean $\zeta(A, \alpha), \zeta(B, \beta), \, t$ tangente común a ambas, $\zeta(A, \alpha) \cap t = \{P\}$ y $\zeta(A, \alpha) \cap t = \{Q\}$. Demostrar que $P$ y $Q$ son puntos conjugados con respecto a cualquier circunferencia que pertenezca a la misma familia que $\zeta(A, \alpha)$ y $\zeta(B, \beta).$ 
+
+\vspace{0.5cm}
+
+Se dice que un triángulo es autopolar con respecto a una circunferencia cuando cada vértice es polo del lado opuesto.
+
+\item Construir un triángulo autopolar dados $A$ y $B$ puntos en el plano tales que $B \in a$. 
+
+\item Sea $\triangle ABC$. Demostrar que el otrocentro del $\triangle ABC$ es el centro de la circunferencia que hace que $\triangle ABC$ sea autopolar.
+
+\item Dada $\zeta(O, r)$, ¿cuántos triángulos autopolares respecto a $\zeta(O, r)$ existen?
+
+\item Dado $\triangle ABC$, ¿cuántas circunferencias existen respecto a las cuales $\triangle ABC$ es autopolar? 
+
+\end{enumerate}
+\end{document}
