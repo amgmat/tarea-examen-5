@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{makeidx}
+\usetikzlibrary{arrows}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=red]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\voffset=-2 cm
+\hoffset=-3 cm
+\textwidth=20 cm
+\textheight=22 cm
+
+
+\theoremstyle{definition}
+\newtheorem{teo}{\textcolor{red}{Teorema}}[section]
+\newtheorem{df}[teo]{\textcolor{cyan}{Definición}}
+\newtheorem{ej}[teo]{\textcolor{red}{Ejercicio}}
+\newtheorem{prop}[teo]{\textcolor{red}{Proposición}}
+\newtheorem{lema}[teo]{\textcolor{red}{Lema}}
+\newtheorem{cor}[teo]{\textcolor{red}{Corolario}}
+\newtheorem{obs}[teo]{\textcolor{purple}{Observaci?n}}
+\newtheorem{ejp}[teo]{\textcolor{purple}{Ejemplo}}
+
+\newenvironment{pba}{\noindent\textbf{\textcolor{blue}{Prueba:}}}{\begin{flushright}
+$\square$ \end{flushright}}
+\newenvironment{dem}{\noindent\textbf{\textcolor{blue}{Demostraci?n}:}}{\begin{flushright}
+\rule{1ex}{1ex} \end{flushright}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+
+
+\title{Tarea 4 \\
+Geometría Moderna II}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+\item Sea $l_H$ y $P$ un punto en el plano hiperbólico. Construir una $m_H$ incidente en $P$ que sea ortogonal a $l_H$. ¿Es única dicha $h$-recta?
+
+\item Sean $A$ y $B$ dos puntos en el plano hiperbólico. Construir el punto medio del $h-$segmento $AB$.
+
+\item Demostrar que el lugar geométrico de los puntos en el plano cuya distancia a dos puntos fijos es la misma, es la $h-$recta ortogonal al $h-$segmento que determinan los puntos fijos por el punto medio del $h-$segmento.
+
+\item Sean $l_H$ y $m_H$ no incidentes en el plano hiperbólico. Construir una $h-$recta perpendicular común a las dos. ¿Es única dicha $h$-recta?
+
+\item Sea $h-\zeta$ una $h$-circunferencia en el plano hiperbólico. Encontrar el centro hiperbólico de $h-\zeta$.
+
+\item  Sean $A, B, O$ tres puntos en el plano hiperbólico. Construir la $h-$circunferencia con $h-$centro $O$ y radio la distancia hiperbólica entre $A$ y $B$.
+
+\item Sea $l_H$. ¿Cuál es el lugar geométrico de los puntos $X$ en el plano hiperbólico cuya distancia hiperbólica a $l_H$ es la misma?
+
+\item Sean $l_H$ y $m_H$ incidentes en el plano hiperbólico. ¿Cuál es el lugar geométrico de los puntos $X$ en el plano hiperbólico tales que la distancia hiperbólico entre $X$ y $l_H$ es la misma que la distancia hiperbólica entre $X$ y $m_H$? 
+
+\item Demostrar que las medianas de un triángulo hiperbólico son concurrentes.
+
+\item Demostrar que las bisectrices de un triángulo hiperbólico son concurrentes.
+
+\end{enumerate}
+\end{document}
