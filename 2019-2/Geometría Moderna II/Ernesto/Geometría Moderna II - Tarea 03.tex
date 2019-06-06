@@ -1,0 +1,112 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-3cm
+\textwidth = 19.5cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Moderna II}}
+\fancyhead[LE,RO]{\bfseries{2019-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2019}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 03}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para al Evaluación Parcial 03}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large EVALUACIÓN PARCIAL 03 \\ DEL LUNES 08-ABRIL-2019 AL VIERNES
+12-ABRIL-2019\\ De 20:00 a 21:00 HORAS - Salón P-108}}
+\end{center}
+
+\textbf{INSTRUCCIONES}:
+\begin{itemize}
+\item La tercera evaluación parcial consistirá en una exposición de un problema de la siguiente lista.
+\item La asistencia a las sesiones de exposiciones forma parte de dicha evaluación.
+\item Cada estudiante deberá exponer solamente algunos ejercicios de la presente lista. La asignación de ejercicios se realizará en el momento que inicie la sesión de exposiciones. \textbf{Sugerencia: Recomendamos ampliamente resolver TODA la tarea con anticipación.}
+\item Deberán entregar por escrito los ejercicios que se expongan a más tardar el \textbf{Viernes 12 de abril de 2019 a las 20:00 horas}.
+\end{itemize}
+
+\begin{center}
+\textcolor{purple}{\textbf{\large Polos y polares}}
+\end{center}
+
+\begin{enumerate}
+
+\item Demostrar que en un triángulo rectángulo las mediatrices concurren en el punto medio de la hipotenusa.
+
+\item Sea $\zeta(P, \rho)$ y $L$ un punto en el plano tal que $\rho < |LP|$. Demostrar que la recta que contiene a los puntos de tangencia a $\zeta(P,\rho)$ de las tangentes a $\zeta(P, \rho)$ desde $L$ es la polar de $L$. 
+
+\item Sea $l$ una recta y $L$ un punto en el plano. Construir $\zeta(P, \rho)$ tal que $l$ sea polar de
+$L$ respecto a $\zeta(P, \rho)$. ¿Cuántas maneras hay de hacerlo?
+
+\item Demostrar que
+\begin{enumerate}
+\item Un par de puntos son conjugados con respecto a $\zeta(P, \rho)$ entonces sus polares son rectas conjugadas respecto a $\zeta(P, \rho)$.
+\item Un par de rectas son conjugadas con respecto a $\zeta(P, \rho)$ entonces sus polos son puntos conjugados respecto a $\zeta(P, \rho)$.
+\end{enumerate}
+
+\item Demostrar que si $a$ y $b$ son rectas conjugadas respecto a $\zeta(P, \rho)$ tales que $a \cap b = \{X\}$ con $\rho < |XP|$ entonces $|a \cap \zeta(P, \rho)| = 2$ y $|b \cap \zeta(P, \rho)| = 0$ o $|a \cap \zeta(P, \rho)| = 0$ y $|b \cap \zeta(P, \rho)| = 2$.
+
+\item Sea $\mathbb L$ el conjunto de rectas incidentes en el punto $L$ en el plano. Determinar el lugar geométrico de los puntos conjugados a $L$ en $l$ para cada $l \in \mathbb L$.
+
+\item Considerar $\square ABCD$ un cuadrado y $\zeta(P, \rho)$ para demostrar que $A$ es conjugado de $C$ respecto a $\zeta(P, \rho)$ si y solamente si $B$ es conjugado de $D$ respecto a $\zeta(P, \rho)$.
+
+\item Sean $\zeta(A, \alpha)$ y $ \zeta(B, \beta)$ circunferencias con la propiedad de tener a la recta $t$ como una tangente común. Demostrar que si $\Gamma$ es la familia de circunferencias coaxiales a la que pertenecen $\zeta(A, \alpha)$ y $ \zeta(B, \beta)$, $\zeta(A, \alpha) \cap t = \{P\}$ y $\zeta(B, \beta) \cap t = \{Q\}$ entonces $P$ y $Q$ son puntos conjugados con respecto a $\zeta(X, \xi)$ para cualquier $\zeta(X,\xi) \in \Gamma$.
+
+\item Sea $\zeta(P,\rho)$ y $A \neq P$. Construir la polar de $A$ con el uso de únicamente regla.
+
+\item Sea $\zeta(P,\rho)$ y $A$ un punto en el plano tal que $\rho \leq |PA|$. Construir las tangentes a $\zeta(P, \rho)$ por $A$ con el uso de únicamente regla.
+
+\item Triángulo autopolar\footnote{$\triangle ABC$ es \textbf{autopolar respecto a $\zeta(P, \rho)$} si y solamente si cada vértice es polo del lado opuesto respecto a $\zeta(P, \rho)$.}:
+\begin{enumerate}
+\item Construir un triángulo que sea autopolar respecto a $\zeta(P,\rho)$ dada una recta $c$ y $A \in c$.
+\item Demostrar que el otrocentro de un triángulo autopolar respecto a $\zeta(P,\rho)$ es $P$.
+\end{enumerate}
+
+\item Demostrar que si un triángulo es autopolar respecto a $\zeta(P,\rho)$ entonces:
+\begin{enumerate}
+\item Solamente un vértice del triángulo se encuentra dentro de la circunferencia.
+\item El ángulo interno del vértice que se encuentra dentro de la circunferencia es mayor a uno recto.
+\end{enumerate}
+
+\item Dado $\triangle ABC$ con la propiedad de tener un ángulo interno mayor que uno recto. Construir una circunferencia $\zeta(P,\rho)$ tal que $\triangle ABC$ sea autopolar respecto a $\zeta(P,\rho)$. ¿Cuántas maneras hay de hacerlo? 
+
+\item Demostrar que si $\{A,B,C,D\} \subseteq \zeta(P,\rho)$ entonces el triángulo diagonal de $\square ABCD$ es autopolar respecto a $\zeta(P,\rho)$.
+
+\item Demostrar que si $\triangle ABC$ es autopolar respecto a $\zeta(P,\rho)$ entonces el inverso de la circunferencia que inscribe a $\triangle ABC$ respecto a $\zeta(P, \rho)$ es la circunferencia de los nueve puntos de $\triangle ABC$.
+
+\end{enumerate}
+
+\end{document}
