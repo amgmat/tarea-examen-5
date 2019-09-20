@@ -110,12 +110,12 @@ Ciudad de México, \today.
 \chapter{El principio de dualidad}
 
 %%%POLARIDAD
-\section{Polaridad}
+\section{Polaridad}\index{polaridad}
 
 En esta sección veremos como el concepto de conjuntos armónicos (puntos o rectas) permiten construir una función, en un plano, en la que podamos asociar a algunos puntos (rectas) una recta (punto) en dicho plano.\\
 
 %%% POLARIDAD TRILINEAL
-\subsection{Polaridad trilineal}
+\subsection{Polaridad trilineal}\index{polaridad!trilineal}
 
 Consideremos un trilátero con lados $a$, $b$, $c$ y vértices
 $$a \cap b =\{C\} \qquad ; \qquad b \cap c = \{A\} \qquad ; \qquad c \cap a = \{B\}$$
@@ -126,6 +126,8 @@ $$\overline{PA} = q \quad ; \quad \overline{PB} = r\quad ; \quad \overline{PC} =
 \begin{obs}
 Notemos que $q$, $r$ y $s$ son distintas a las rectas $a$, $b$ y $c$, pues de no serlo, $P \in a \cup b \cup c$.
 \end{obs}
+
+\newpage
 
 De esta manera, podemos considerar las siguientes intersecciones:
 \begin{center}
@@ -147,30 +149,32 @@ $$ \{B,C,D\}\subseteq a \qquad ; \qquad \{A,C,E\} \subseteq b \qquad ; \qquad \{
 
 De esta construcción notemos dos cosas:
 \begin{enumerate}
-\item\label{polaridad1} Es posible construir puntos sobre los lados del trilátero que con los vértices del trilátero y los puntos en los que intersecan las rectas $\overline{PA}$, $\overline{PB}$ y $\overline{PC}$ sean conjuntos armónicos; es decir, construir a los puntos $G \in a$, $H \in b$ y $I \in c$ tales que
+\item\label{lineal1} Es posible construir puntos sobre los lados del trilátero que con los vértices del trilátero y los puntos en los que intersecan las rectas $\overline{PA}$, $\overline{PB}$ y $\overline{PC}$ sean conjuntos armónicos; es decir, construir a los puntos $G \in a$, $H \in b$ y $I \in c$ tales que
 $$H(B,C;D,G) \quad ; \quad H(A,C;E,H) \quad ; \quad H(A,B;F,I)$$
-Notemos que como $P\notin  a \cup b \cup c$ entonces $P, A, B, C$ son los vértices de un cuadrángulo completo cuyo triángulo diagonal es $\triangle DEF$. Puesto que $\{D,E,F\}$ es un conjunto de puntos en posición general (\ref{A7}), tenemos que las rectas $\overline{DE}$, $\overline{EF}$ y $\overline{FD}$ son distintas y considerar las siguientes intersecciones
+Notemos que como $P\notin  a \cup b \cup c$ entonces $P, A, B, C$ son los vértices de un cuadrángulo completo cuyo triángulo diagonal es $\triangle DEF$. Puesto que $\{D,E,F\}$ es un conjunto de puntos en posición general (\ref{A7}), tenemos que las rectas $\overline{DE}=j$, $\overline{EF}=k$ y $\overline{FD}=l$ son distintas y considerar las siguientes intersecciones
+$$j \cap c= \{I\} \quad ; \quad k \cap a = \{G\} \quad ; \quad l \cap b = \{H\}$$
+es decir, 
 $$\overline{DE} \cap \overline{AB} = \{I\} \quad ; \quad \overline{EF} \cap \overline{BC} = \{G\} \quad ; \quad \overline{FD} \cap \overline{CA} = \{H\}$$
 De esta manera, tenemos que:
 \begin{itemize}
 \item $H(B,C;D,G)$:
 
-Considerar al cuadrángulo completo $\square PAEF$ y $\overline{BC}$.
+Considerar al cuadrángulo completo $\square PAEF$ y $a$.
 
 \item $H(A,C;E,H)$:
 
-Considerar al cuadrángulo completo $\square PBFD$ y $\overline{CA}$.
+Considerar al cuadrángulo completo $\square PBFD$ y $b$.
 
 \item $H(A,B;F,I)$:
 
-Considerar al cuadrángulo completo $\square PCDE$ y $\overline{AB}$.
+Considerar al cuadrángulo completo $\square PCDE$ y $c$.
 \end{itemize}
 
-\item\label{polaridad2} Notemos que:
+\item\label{lineal2} Notemos que:
 \begin{itemize}
-\item $D \in \overline{PA} \Leftrightarrow P \in \overline{AD}$
-\item $E \in \overline{PB} \Leftrightarrow P \in \overline{BE}$
-\item $F \in \overline{PC} \Leftrightarrow P \in \overline{CF}$
+\item $D \in \overline{PA} = q \Leftrightarrow P \in \overline{AD} = q$
+\item $E \in \overline{PB} = r  \Leftrightarrow P \in \overline{BE} = r$
+\item $F \in \overline{PC} = s \Leftrightarrow P \in \overline{CF} = s$
 \end{itemize}
 en otras palabras,
 $$\overline{AD} \cap \overline{BE} \cap \overline{CF} = \{P\}$$
@@ -178,22 +182,22 @@ $$\overline{AD} \cap \overline{BE} \cap \overline{CF} = \{P\}$$
 Por lo tanto, se tiene que $\triangle ABC$ está en perspectiva desde $P$ con $\triangle DEF$. En virtud del Teorema de Desargues, tenemos que $\triangle ABC$ está en perspectiva desde una recta con $\triangle DEF$; es decir, la intersección de los lados correspondientes de los triángulos son tres puntos colineales.
 \end{enumerate}
 
-De esta manera, por~\ref{polaridad1} y ~\ref{polaridad2}, se tiene que $\{G,H, I\}$ es un conjunto de puntos colineales, donde
+De esta manera, por~\ref{lineal1} y ~\ref{lineal2}, se tiene que $\{G,H, I\}$ es un conjunto de puntos colineales, donde
 $$\overline{AB} \cap \overline{DE} = \{I\} \quad; \quad \overline{BC} \cap \overline{EF} = \{G\} \quad ; \quad \overline{CA} \cap \overline{FD} = \{H\}$$
 
 Llamaremos $p$ a la recta en la que incide $\{G,H,I\}$.
 
-De esta manera, $P$ es el \textbf{polo trilineal respecto a $\triangle abc$}\index{trilineal!polo} de la recta $p$ y $p$ es la \textbf{polar trilineal respecto a $\triangle abc$}\index{trilineal!polar} del punto $P$.
+De esta manera, $P$ es el \textbf{polo trilineal respecto a $\triangle abc$}\index{polaridad!trilineal!polo} de la recta $p$ y $p$ es la \textbf{polar trilineal respecto a $\triangle abc$}\index{polaridad!trilineal!polar} del punto $P$.
 
 
 %%% POLARIDAD TRIPUNTUAL
-\subsection{Polaridad tripuntual}
+\subsection{Polaridad tripuntual}\index{polaridad!tripuntual}
 
 Consideremos un triángulo con vértices $A$, $B$, $C$ y lados
 $$\overline{AB}= c \qquad ; \qquad \overline{BC} = a \qquad ; \qquad \overline{CA}= b $$
 
 Así, para cualquier recta $p$ no incidente en $A$, $B$ ni $C$, podemos considerar los puntos
-$$ p \cap a = \{Q\} \quad ; \quad p \cap b =\{R\} \quad ; \quad p \cap c \{S\}$$
+$$ p \cap a = \{Q\} \quad ; \quad p \cap b =\{R\} \quad ; \quad p \cap c = \{S\}$$
 
 \begin{obs}
 Notemos que $Q$, $R$ y $S$ son distintos a los puntos $A$, $B$ y $C$, pues de no serlo, $p$ incidiría en $A$, $B$ o $C$.
@@ -219,50 +223,50 @@ $$ b \cap c \cap d = \{A\} \qquad ; \qquad a \cap c \cap e =\{B\} \qquad ; \qqua
 
 De esta construcción notemos dos cosas:
 \begin{enumerate}
-\item\label{polaridad1} Es posible construir rectas incidentes en los vértices del triángulo que con los lados del trilángulo y las rectas en las que inciden $Q$, $R$ y $S$ sean conjuntos armónicos; es decir, construir a las rectas $g$, $h$, $i$ tales que $A \in g$, $B \in h$, $C\in i$ y  
+\item\label{puntual1} Es posible construir rectas incidentes en los vértices del triángulo que con los lados del trilángulo y las rectas en las que inciden $Q$, $R$ y $S$ sean conjuntos armónicos; es decir, construir a las rectas $g$, $h$, $i$ tales que $A \in g$, $B \in h$, $C\in i$ y  
 $$H(b,c;d,g) \quad ; \quad H(a,c;e,h) \quad ; \quad H(a,b;f,i)$$
-Notemos que como $p$ no incide en $A$, $B$ ni $C$ entonces $p, a, b, c$ son los lados de un cuadrilátero completo cuyo trilátero diagonal es $\triangle def$. Puesto que $\{d,e,f\}$ es un conjunto de rectas en posición general (Dual de \ref{A7}), tenemos que los puntos $d \cap e$, $e \cap f$ y $f \cap c $ son distintos y considerar las siguientes rectas
-
-%%%%%
-%%%%%
-%%%%%
-%%%%%
-%%%%%
-
-$$\overline{DE} \cap \overline{AB} = \{I\} \quad ; \quad \overline{EF} \cap \overline{BC} = \{G\} \quad ; \quad \overline{FD} \cap \overline{CA} = \{H\}$$
+Notemos que como $p$ no incide en $A$, $B$ ni $C$ entonces $p, a, b, c$ son los lados de un cuadrilátero completo cuyo trilátero diagonal es $\triangle def$. Puesto que $\{d,e,f\}$ es un conjunto de rectas en posición general (Dual de \ref{A7}), tenemos que los puntos $d \cap e = \{J\}$, $e \cap f =\{K\}$ y $f \cap d =\{L\}$ son distintos y considerar las siguientes rectas
+$$\overline{JC}= i\quad ; \quad \overline{KA} = g \quad ; \quad \overline{LB} =h$$
 De esta manera, tenemos que:
 \begin{itemize}
-\item $H(B,C;D,G)$:
+\item $H(b,c;d,g)$:
 
-Considerar al cuadrángulo completo $\square PAEF$ y $\overline{BC}$.
+Considerar al cuadrilátero completo $\square paef$ y $A$.
 
-\item $H(A,C;E,H)$:
+\item $H(a,c;e,h)$:
 
-Considerar al cuadrángulo completo $\square PBFD$ y $\overline{CA}$.
+Considerar al cuadrilátero completo $\square pbfd$ y $B$.
 
-\item $H(A,B;F,I)$:
+\item $H(a,b;f,i)$:
 
-Considerar al cuadrángulo completo $\square PCDE$ y $\overline{AB}$.
+Considerar al cuadrilátero completo $\square pcde$ y $C$.
 \end{itemize}
 
-\item\label{polaridad2} Notemos que:
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+
+\item\label{puntual2} Notemos que:
 \begin{itemize}
-\item $D \in \overline{PA} \Leftrightarrow P \in \overline{AD}$
-\item $E \in \overline{PB} \Leftrightarrow P \in \overline{BE}$
-\item $F \in \overline{PC} \Leftrightarrow P \in \overline{CF}$
+\item $d= \overline{QA}$ y $p \cap a = \{Q\} \Rightarrow d \cap a =\{Q\} \subseteq p$
+\item $e= \overline{RB}$ y $p \cap b = \{R\} \Rightarrow e \cap b =\{R\} \subseteq p$
+\item $f= \overline{SC}$ y $p \cap C = \{S\} \Rightarrow f \cap c =\{S\} \subseteq p$
 \end{itemize}
 en otras palabras,
-$$\overline{AD} \cap \overline{BE} \cap \overline{CF} = \{P\}$$
+$$a \cap d \subseteq p \quad ; \quad b \cap e \subseteq p \quad ; \quad c \cap f \subseteq p$$
 
-Por lo tanto, se tiene que $\triangle ABC$ está en perspectiva desde $P$ con $\triangle DEF$. En virtud del Teorema de Desargues, tenemos que $\triangle ABC$ está en perspectiva desde una recta con $\triangle DEF$; es decir, la intersección de los lados correspondientes de los triángulos son tres puntos colineales.
+Por lo tanto, se tiene que $\triangle abc$ está en perspectiva desde $p$ con $\triangle def$. En virtud del Teorema de Desargues, tenemos que $\triangle abc$ está en perspectiva desde un punto con $\triangle def$; es decir, las rectas en las que inciden vértices correspondientes son tres rectas concurrentes.
 \end{enumerate}
 
-De esta manera, por~\ref{polaridad1} y ~\ref{polaridad2}, se tiene que $\{G,H, I\}$ es un conjunto de puntos colineales, donde
-$$\overline{AB} \cap \overline{DE} = \{I\} \quad; \quad \overline{BC} \cap \overline{EF} = \{G\} \quad ; \quad \overline{CA} \cap \overline{FD} = \{H\}$$
+De esta manera, por~\ref{puntual1} y ~\ref{puntual2}, se tiene que $g$ $h$ e $i$ es un conjunto de rectas concurrentes, donde
+$$\overline{JC}= i \quad; \quad \overline{AK} = g \quad ; \quad \overline{BL} = h$$
 
-Llamaremos $p$ a la recta en la que incide $\{G,H,I\}$.
+Llamaremos $P$ al punto en donde inciden simultaneamente $g$, $h$ e $i$.
 
-De esta manera, $P$ es el \textbf{polo trilineal respecto a $\triangle abc$}\index{trilineal!polo} de la recta $p$ y $p$ es la \textbf{polar trilineal respecto a $\triangle abc$}\index{trilineal!polar} del punto $P$.
+De esta manera, $p$ es la \textbf{polar tripuntual respecto a $\triangle ABC$}\index{polaridad!tripuntual!polar} del punto $P$ y $P$ es el \textbf{polo tripuntual respecto a $\triangle ABC$}\index{polaridad!tripuntual!polo} de la recta $p$.
 
 \chapter{Dualidad en el plano}
 
@@ -425,5 +429,6 @@ Concurrencia $\Leftrightarrow$ Colinealidad
 
   
 
-    
+\printindex  
+
 \end{document}
