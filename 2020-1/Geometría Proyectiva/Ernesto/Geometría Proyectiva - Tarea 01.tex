@@ -21,8 +21,6 @@
 \usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
 \tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
 
-
-
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
 citecolor=green]{hyperref}
 
@@ -38,7 +36,7 @@ citecolor=green]{hyperref}
 \fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
 \fancyhead[LE,RO]{\bfseries{2020-1}}
 \fancyfoot[RE,RO]{\bfseries{Septiembre 2019}}
-\fancyfoot[LE,LO]{\bfseries{Tarea 01}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 01}}
 
 \newcommand{\R}{\mathbb R}
 \newcommand{\Q}{\mathbb Q}
@@ -54,21 +52,70 @@ citecolor=green]{hyperref}
 
 \begin{document}
 \begin{center}
-\textcolor{blue}{\textbf{\large Guía de ejercicios para al Evaluación Parcial 01}}\\
+\textcolor{blue}{\textbf{\large Tarea-Examen de ejercicios para al Evaluación Parcial 01}}\\
 \vspace{0.5 cm}
-\textcolor{red}{\textbf{\large EXAMEN PARCIAL 01 \\ VIERNES
-13-SEPTIEMBRE-2019\\ De 19:00 a 21:00 HORAS - Salón P-213}}
+\textcolor{red}{\textbf{\large FECHA DE ENTREGA \\ VIERNES 13-SEPTIEMBRE-2019\\ De 17:00 a 19:00 HORAS - Salón O-223}}
 \end{center}
+
+\textbf{Instrucciones}: Resolver y entregar cuatro de los cinco ejercicios de solo una opción. De entregar más de cuatro ejercicios se anularán los ejercicios de mayor puntaje.
+
+\vspace{1cm}
+
+
+\begin{center}
+\textcolor{blue}{\textbf{\large OPCIÓN A}}
+\end{center}
+
 
 \begin{enumerate}
 \item Sean $\{P,Q\} \subseteq \p^3$ y $\pi$ un plano en $\p^3$. Demostrar que si $\{P,Q\} \subseteq \pi$ entonces $\overline{PQ}\subset \pi$.
 
-\item Sea $\pi$ un plano en $\p^3$ y $\{A,B,C,D,E,F\} \subseteq \pi$ tales que $\{A,B,C\}$ y $\{D,E,F\}$ son puntos en posición general. Demostrar que $\pi_{ABC}=\pi_{DEF}$
+%\item Sea $\pi$ un plano en $\p^3$ y $\{A,B,C,D,E,F\} \subseteq \pi$ tales que $\{A,B,C\}$ y $\{D,E,F\}$ son puntos en posición general. Demostrar que $\pi_{ABC}=\pi_{DEF}$.
 
- \item Sean $l$ una recta y $\pi$ un plano en $\p^3$. Demostrar que si $l \not\subseteq \pi$ y $l \cap \pi \neq \emptyset$ entonces $|l\cap \pi|= 1$.
+\item Sean $l$ una recta y $\pi$ un plano en $\p^3$. Demostrar que si $l \not\subseteq \pi$ y $l \cap \pi \neq \emptyset$ entonces $|l\cap \pi|= 1$.
 
- \item Demostrar que existen cuatro puntos coplanaes que por ternas están en posición general.
- 
- \item Demostrar que existen cuatro rectas coplanares que por ternas están en posición general.
+%\item Demostrar que si en cada recta en $\p^3$ inciden $n$ puntos distintos entonces en cada punto inciden $n$ rectas distintas.
+
+\item Demostrar que existen cuatro puntos coplanaes que por ternas están en posición general.
+
+%\item Demostrar que existen cuatro rectas coplanares que por ternas están en posición general.
+
+\item Demostrar que si tres triángulos están en perspectiva desde un mismo punto entonces los tres ejes de perspectiva, que determinan los triángulos por pares, son tres rectas concurrentes.
+
+%\item Demostrar que si tres triángulos están en perspectiva desde una misma recta entonces los tres centros de perspectiva, que determinan los triángulos por pares, son tres puntos colineales.
+
+\item Demostrar que si dos cuadrángulos completos determinan el mismo conjunto cuadrangular entonces sus triángulos diagonales están en perspectiva.
+
+%\item Construir un cuadrángulo completo que tenga a un triángulo dado como triángulo diagonal.
 \end{enumerate}
+
+\vspace{1cm}
+
+\begin{center}
+\textcolor{blue}{\textbf{\large OPCIÓN B}}
+\end{center}
+
+
+\begin{enumerate}
+%\item Sean $\{P,Q\} \subseteq \p^3$ y $\pi$ un plano en $\p^3$. Demostrar que si $\{P,Q\} \subseteq \pi$ entonces $\overline{PQ}\subset \pi$.
+
+\item Sea $\pi$ un plano en $\p^3$ y $\{A,B,C,D,E,F\} \subseteq \pi$ tales que $\{A,B,C\}$ y $\{D,E,F\}$ son puntos en posición general. Demostrar que $\pi_{ABC}=\pi_{DEF}$.
+
+%\item Sean $l$ una recta y $\pi$ un plano en $\p^3$. Demostrar que si $l \not\subseteq \pi$ y $l \cap \pi \neq \emptyset$ entonces $|l\cap \pi|= 1$.
+
+\item Demostrar que si en cada recta en $\p^3$ inciden $n$ puntos distintos entonces en cada punto inciden $n$ rectas distintas.
+
+%\item Demostrar que existen cuatro puntos coplanaes que por ternas están en posición general.
+
+\item Demostrar que existen cuatro rectas coplanares que por ternas están en posición general.
+
+%\item Demostrar que si tres triángulos están en perspectiva desde un mismo punto entonces los tres ejes de perspectiva, que determinan los triángulos por pares, son tres rectas concurrentes.
+
+\item Demostrar que si tres triángulos están en perspectiva desde una misma recta entonces los tres centros de perspectiva, que determinan los triángulos por pares, son tres puntos colineales.
+
+%\item Demostrar que si dos cuadrángulos completos determinan el mismo conjunto cuadrangular entonces sus triángulos diagonales están en perspectiva.
+
+\item Construir un cuadrángulo completo que tenga a un triángulo dado como triángulo diagonal.
+\end{enumerate}
+
 \end{document}

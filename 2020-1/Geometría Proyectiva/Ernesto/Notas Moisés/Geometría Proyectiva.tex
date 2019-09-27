@@ -1,0 +1,434 @@
+\documentclass[12pt]{book}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+%
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{pgf,tikz}
+\usepackage{makeidx}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,citecolor=green]{hyperref}
+
+\usepackage[Glenn]{fncychap}
+\ChNameVar{\bfseries\Large}
+\ChNumVar{\Huge}
+\ChTitleVar{\bfseries\Large}
+\ChRuleWidth{0.5 pt}
+\ChNameUpperCase
+\ChTitleUpperCase
+
+\theoremstyle{definition}
+\newtheorem{teo}{\textcolor{red}{Teorema}}[chapter]
+\newtheorem{df}[teo]{\textcolor{cyan}{Definición}}
+\newtheorem{ej}[teo]{\textcolor{red}{Ejercicio}}
+\newtheorem{prop}[teo]{\textcolor{red}{Proposición}}
+\newtheorem{lema}[teo]{\textcolor{red}{Lema}}
+\newtheorem{cor}[teo]{\textcolor{red}{Corolario}}
+\newtheorem{obs}[teo]{\textcolor{purple}{Observación}}
+
+\newenvironment{pba}{\noindent\textbf{\textcolor{blue}{Prueba:}}}{\begin{flushright}
+$\square$ \end{flushright}}
+\newenvironment{dem}{\noindent\textbf{\textcolor{blue}{Demostración}:}}{\begin{flushright}
+\rule{1ex}{1ex} \end{flushright}}
+
+\newcommand{\K}{\mathbb K}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\s}{\mathbb S}
+\newcommand{\D}{\mathbb D}
+\newcommand{\B}{\mathbb B}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\p}{\mathbb P}
+
+\makeindex
+
+\begin{document}
+\title{\textbf{Geometría Proyectiva} \\ \vspace{1cm} \Large{Universidad Nacional Autónoma de México \\ Facultas de Ciencias}}
+\date{2020-1}
+\author{Ernesto Alejandro Vázquez Navarro}
+\maketitle
+
+\tableofcontents
+
+\chapter*{Agradecimientos}
+\addcontentsline{toc}{chapter}{Agradecimientos} 
+
+Quiero agradecer infinitamente al \textbf{Ing. Moisés Rodríguez Salum} por compartirnos las notas que capturó del curso Geometría Proyectiva que impartí en la Facultad de Ciencias de la Universidad Nacional Autónoma de México en el semestre 2020-1 y que amablemente nos permitió modificarlas para su uso didáctico. \\
+
+Hemos modificado el contenido de sus notas, por lo que nos hacemos responsables de cualquier error que se encuentre en estas notas y agradeceremos nos los hagan saber a ernestociencias@yahoo.com.mx. \\ \\
+
+Ciudad de México, \today.
+
+%%%AXIOMAS
+\chapter{Axiomas de la geometría de $\p^3$}
+
+\begin{enumerate}[label=\bf{Ax.\arabic*}]
+
+\item \label{A1} Existe un punto y una recta que no son incidentes.
+
+\item \label{A2} En cada recta inciden al menos tres puntos.
+
+\item \label{A3} Para cualquier par de puntos distintos, $A \neq B$, existe una única recta en la que inciden que denotaremos como $\overline{AB}$.
+
+\item \label{A4} Si $A,B,C$ y $D$ son puntos distintos tales que $\overline{AB} \cap \overline{CD} \neq \emptyset$ entonces $\overline{AC} \cap \overline{BD} \neq \emptyset$.
+
+\item \label{A5} Para cualquier plano existe al menos un punto que no incide en el plano.
+
+\item \label{A6} Cualesquiera dos planos distintos inciden en al menos dos puntos.
+
+\item \label{A7} Los tres puntos diagonales de un cuadrángulo completo nunca son colineales.
+
+\item \label{A8} Si una proyectividad deja fijos a tres puntos distintos de una recta entonces deja fijo a cualquier punto de la recta.
+
+\end{enumerate}
+
+
+%%%EL PRINCIPIO DE DUALIDAD
+\chapter{El principio de dualidad}
+
+%%%POLARIDAD
+\section{Polaridad}\index{polaridad}
+
+En esta sección veremos como el concepto de conjuntos armónicos (puntos o rectas) permiten construir una función, en un plano, en la que podamos asociar a algunos puntos (rectas) una recta (punto) en dicho plano.\\
+
+%%% POLARIDAD TRILINEAL
+\subsection{Polaridad trilineal}\index{polaridad!trilineal}
+
+Consideremos un trilátero con lados $a$, $b$, $c$ y vértices
+$$a \cap b =\{C\} \qquad ; \qquad b \cap c = \{A\} \qquad ; \qquad c \cap a = \{B\}$$
+
+Así, para cualquier punto $P \notin a \cup b \cup c$ podemos considerar a las rectas
+$$\overline{PA} = q \quad ; \quad \overline{PB} = r\quad ; \quad \overline{PC} = s$$
+
+\begin{obs}
+Notemos que $q$, $r$ y $s$ son distintas a las rectas $a$, $b$ y $c$, pues de no serlo, $P \in a \cup b \cup c$.
+\end{obs}
+
+\newpage
+
+De esta manera, podemos considerar las siguientes intersecciones:
+\begin{center}
+\begin{multicols}{3}
+$\overline{PA} \cap a = q \cap a = \{D\}$\\
+$\overline{PA} \cap b = q \cap b = \{A\}$\\
+$\overline{PA} \cap c = q \cap c = \{A\}$\\
+$\overline{PB} \cap a = r \cap a = \{B\}$\\
+$\overline{PB} \cap b = r \cap b = \{E\}$\\
+$\overline{PB} \cap c = r \cap c = \{B\}$\\
+$\overline{PC} \cap a = s \cap a = \{C\}$\\
+$\overline{PC} \cap b = s \cap b = \{C\}$\\
+$\overline{PC} \cap c = s \cap c = \{F\}$
+\end{multicols}
+\end{center}
+
+Esto implica que
+$$ \{B,C,D\}\subseteq a \qquad ; \qquad \{A,C,E\} \subseteq b \qquad ; \qquad \{A,B,F\} \subseteq c$$
+
+De esta construcción notemos dos cosas:
+\begin{enumerate}
+\item\label{lineal1} Es posible construir puntos sobre los lados del trilátero que con los vértices del trilátero y los puntos en los que intersecan las rectas $\overline{PA}$, $\overline{PB}$ y $\overline{PC}$ sean conjuntos armónicos; es decir, construir a los puntos $G \in a$, $H \in b$ y $I \in c$ tales que
+$$H(B,C;D,G) \quad ; \quad H(A,C;E,H) \quad ; \quad H(A,B;F,I)$$
+Notemos que como $P\notin  a \cup b \cup c$ entonces $P, A, B, C$ son los vértices de un cuadrángulo completo cuyo triángulo diagonal es $\triangle DEF$. Puesto que $\{D,E,F\}$ es un conjunto de puntos en posición general (\ref{A7}), tenemos que las rectas $\overline{DE}=j$, $\overline{EF}=k$ y $\overline{FD}=l$ son distintas y considerar las siguientes intersecciones
+$$j \cap c= \{I\} \quad ; \quad k \cap a = \{G\} \quad ; \quad l \cap b = \{H\}$$
+es decir, 
+$$\overline{DE} \cap \overline{AB} = \{I\} \quad ; \quad \overline{EF} \cap \overline{BC} = \{G\} \quad ; \quad \overline{FD} \cap \overline{CA} = \{H\}$$
+De esta manera, tenemos que:
+\begin{itemize}
+\item $H(B,C;D,G)$:
+
+Considerar al cuadrángulo completo $\square PAEF$ y $a$.
+
+\item $H(A,C;E,H)$:
+
+Considerar al cuadrángulo completo $\square PBFD$ y $b$.
+
+\item $H(A,B;F,I)$:
+
+Considerar al cuadrángulo completo $\square PCDE$ y $c$.
+\end{itemize}
+
+\item\label{lineal2} Notemos que:
+\begin{itemize}
+\item $D \in \overline{PA} = q \Leftrightarrow P \in \overline{AD} = q$
+\item $E \in \overline{PB} = r  \Leftrightarrow P \in \overline{BE} = r$
+\item $F \in \overline{PC} = s \Leftrightarrow P \in \overline{CF} = s$
+\end{itemize}
+en otras palabras,
+$$\overline{AD} \cap \overline{BE} \cap \overline{CF} = \{P\}$$
+
+Por lo tanto, se tiene que $\triangle ABC$ está en perspectiva desde $P$ con $\triangle DEF$. En virtud del Teorema de Desargues, tenemos que $\triangle ABC$ está en perspectiva desde una recta con $\triangle DEF$; es decir, la intersección de los lados correspondientes de los triángulos son tres puntos colineales.
+\end{enumerate}
+
+De esta manera, por~\ref{lineal1} y ~\ref{lineal2}, se tiene que $\{G,H, I\}$ es un conjunto de puntos colineales, donde
+$$\overline{AB} \cap \overline{DE} = \{I\} \quad; \quad \overline{BC} \cap \overline{EF} = \{G\} \quad ; \quad \overline{CA} \cap \overline{FD} = \{H\}$$
+
+Llamaremos $p$ a la recta en la que incide $\{G,H,I\}$.
+
+De esta manera, $P$ es el \textbf{polo trilineal respecto a $\triangle abc$}\index{polaridad!trilineal!polo} de la recta $p$ y $p$ es la \textbf{polar trilineal respecto a $\triangle abc$}\index{polaridad!trilineal!polar} del punto $P$.
+
+
+%%% POLARIDAD TRIPUNTUAL
+\subsection{Polaridad tripuntual}\index{polaridad!tripuntual}
+
+Consideremos un triángulo con vértices $A$, $B$, $C$ y lados
+$$\overline{AB}= c \qquad ; \qquad \overline{BC} = a \qquad ; \qquad \overline{CA}= b $$
+
+Así, para cualquier recta $p$ no incidente en $A$, $B$ ni $C$, podemos considerar los puntos
+$$ p \cap a = \{Q\} \quad ; \quad p \cap b =\{R\} \quad ; \quad p \cap c = \{S\}$$
+
+\begin{obs}
+Notemos que $Q$, $R$ y $S$ son distintos a los puntos $A$, $B$ y $C$, pues de no serlo, $p$ incidiría en $A$, $B$ o $C$.
+\end{obs}
+
+De esta manera, podemos considerar las siguientes rectas:
+\begin{center}
+\begin{multicols}{3}
+$\overline{QA}= d$\\
+$\overline{QB}= a$\\
+$\overline{QC}= a$\\
+$\overline{RA}= b$\\
+$\overline{RB}= e$\\
+$\overline{RC}= b$\\
+$\overline{SA}= c$\\
+$\overline{SB}= c$\\
+$\overline{SC}= f$
+\end{multicols}
+\end{center}
+
+Esto implica que
+$$ b \cap c \cap d = \{A\} \qquad ; \qquad a \cap c \cap e =\{B\} \qquad ; \qquad a \cap b \cap f = \{C\}$$
+
+De esta construcción notemos dos cosas:
+\begin{enumerate}
+\item\label{puntual1} Es posible construir rectas incidentes en los vértices del triángulo que con los lados del trilángulo y las rectas en las que inciden $Q$, $R$ y $S$ sean conjuntos armónicos; es decir, construir a las rectas $g$, $h$, $i$ tales que $A \in g$, $B \in h$, $C\in i$ y  
+$$H(b,c;d,g) \quad ; \quad H(a,c;e,h) \quad ; \quad H(a,b;f,i)$$
+Notemos que como $p$ no incide en $A$, $B$ ni $C$ entonces $p, a, b, c$ son los lados de un cuadrilátero completo cuyo trilátero diagonal es $\triangle def$. Puesto que $\{d,e,f\}$ es un conjunto de rectas en posición general (Dual de \ref{A7}), tenemos que los puntos $d \cap e = \{J\}$, $e \cap f =\{K\}$ y $f \cap d =\{L\}$ son distintos y considerar las siguientes rectas
+$$\overline{JC}= i\quad ; \quad \overline{KA} = g \quad ; \quad \overline{LB} =h$$
+De esta manera, tenemos que:
+\begin{itemize}
+\item $H(b,c;d,g)$:
+
+Considerar al cuadrilátero completo $\square paef$ y $A$.
+
+\item $H(a,c;e,h)$:
+
+Considerar al cuadrilátero completo $\square pbfd$ y $B$.
+
+\item $H(a,b;f,i)$:
+
+Considerar al cuadrilátero completo $\square pcde$ y $C$.
+\end{itemize}
+
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+
+\item\label{puntual2} Notemos que:
+\begin{itemize}
+\item $d= \overline{QA}$ y $p \cap a = \{Q\} \Rightarrow d \cap a =\{Q\} \subseteq p$
+\item $e= \overline{RB}$ y $p \cap b = \{R\} \Rightarrow e \cap b =\{R\} \subseteq p$
+\item $f= \overline{SC}$ y $p \cap C = \{S\} \Rightarrow f \cap c =\{S\} \subseteq p$
+\end{itemize}
+en otras palabras,
+$$a \cap d \subseteq p \quad ; \quad b \cap e \subseteq p \quad ; \quad c \cap f \subseteq p$$
+
+Por lo tanto, se tiene que $\triangle abc$ está en perspectiva desde $p$ con $\triangle def$. En virtud del Teorema de Desargues, tenemos que $\triangle abc$ está en perspectiva desde un punto con $\triangle def$; es decir, las rectas en las que inciden vértices correspondientes son tres rectas concurrentes.
+\end{enumerate}
+
+De esta manera, por~\ref{puntual1} y ~\ref{puntual2}, se tiene que $g$ $h$ e $i$ es un conjunto de rectas concurrentes, donde
+$$\overline{JC}= i \quad; \quad \overline{AK} = g \quad ; \quad \overline{BL} = h$$
+
+Llamaremos $P$ al punto en donde inciden simultaneamente $g$, $h$ e $i$.
+
+De esta manera, $p$ es la \textbf{polar tripuntual respecto a $\triangle ABC$}\index{polaridad!tripuntual!polar} del punto $P$ y $P$ es el \textbf{polo tripuntual respecto a $\triangle ABC$}\index{polaridad!tripuntual!polo} de la recta $p$.
+
+\chapter{Dualidad en el plano}
+
+%\begin{center}
+Rectas $\Leftrightarrow$ Puntos\\
+Concurrencia $\Leftrightarrow$ Colinealidad
+
+%\begin{flushleft}
+  Ejemplos de Dualidad\\
+  Dado una recta inciden al menos tres puntos.\\
+  Dual: Dado un punto inciden al menos tres rectas.
+  
+  %\begin{proof}[Prueba]
+    Sea $P$ un punto en $\mathbb{P}^3$.\\
+    Por axioma 1, existe una recta $l$ no incidente en $P$.
+
+    Por axioma 2, existen tres puntos distintos \{$A$,$B$,$C$\} $\subseteq$ $l$.
+
+    Por axioma 3, existen $\overline{AP}$, $\overline{BP}$, $\overline{CP}$.
+  %  \begin{center}
+    $\overline{AP} \neq \overline{BP}$\\
+    $\overline{AP} \neq \overline{CP}$\\
+    $\overline{BP} \neq \overline{CP}$\\
+
+   % \begin{flushleft}
+    Entonces existen tres rectas distintas que incidentes en $P$.
+  %\end{proof}
+
+%  \begin{flushleft}
+  Dados dos puntos distintos, existe una única recta incidente en ellos.\\
+  Dual: Dados dos rectas distintas coplanares, existe un único punto que es
+  incidente en ambos.\\
+
+%Dados $\{A$,$B$,$C$,$D\}$ puntos distintos tal que $\overline{AB} \cap \overline{CD} \neq \emptyset$ entonces $\overline{AD} \cap \overline{BC} \neq \emtpyset$.
+  
+  Dual: Dadas $a$,$b$,$c$,$d$ rectas distintas tales que $a \cap b$ y $c \cap d$
+  existen, entonces $a \cap d$ y $b \cap c$ existen.\\
+
+  Los 3 puntos diagonales de un cuadrángulo completo no son colineales.\\
+  Dual: Las 3 rectas diagonales de un cuadrilátero completo no son concurrentes.\\
+%  \begin{proof}[Prueba]
+    Sea el cuadrilátero completo $a$,$b$,$c$,$d$.\\
+    Observación:
+    %\begin{multicols}{2}
+      $a \cap b$ = \{$E$\}\\
+      $a \cap c$ = \{$F$\}\\
+      $a \cap d$ = \{$G$\}\\
+      $c \cap d$ = \{$H$\}\\
+      $b \cap d$ = \{$I$\}\\
+      $b \cap c$ = \{$J$\}
+    %\end{multicols}
+
+   % \begin{flushleft}
+    entonces $\overline{EH}$, $\overline{FI}$, $\overline{GJ}$ son las
+    diagonales del cuadrángulo completo $a$, $b$, $c$, $d$.\\
+
+    Por demostrar,\\
+    %\begin{center}
+      $\overline{EH} \cap \overline{FI} \cap \overline{GJ}$ = $\emptyset$
+
+    %\begin{flushleft}
+    %Consideremos el cuadrángulo completo $\msquare FGIJ$ las rectas que
+    determinan son
+ %   \begin{center}
+      %\begin{multicols}{2}
+        $\overline{FG}$ = $a$\\
+        $\overline{IJ}$ = $b$\\
+        $\overline{FI}$ = $p$\\
+        $\overline{GJ}$ = $q$\\
+        $\overline{FJ}$ = $c$\\
+        $\overline{GI}$ = $d$\\
+      %\end{multicols}
+
+ %   \begin{center}
+    $a \cap b$ = \{$E$\}
+    $p \cap q$ = \{$R$\}
+    $c \cap d$ = \{$H$\}
+
+%    \begin{flushleft}
+      Observación:\\
+   %   \begin{center}
+        $\overline{FI} \cap \overline{GJ}$ = $R$
+
+%    \begin{flushleft}
+    Pero $R \notin \overline{EH}$ por axioma 7.
+  %\end{proof}
+
+  %\begin{flushleft}
+  Ej:\\
+  Sean
+%  \begin{center}
+    \{$A$,$B$,$C$\} $\subseteq l$\\
+    \{$A'$,$B'$,$C'$\} $\subseteq l$\\
+
+  %  \begin{flushleft}
+      donde los puntos son distintos y las rectas coplanares.\\
+
+      ¿Cuántas proyectividades existen tales que
+
+    \begin{center}
+      $ABCX$ proyectividad $A'B'C'X'$
+    \end{center}
+        
+ %   \begin{flushleft}
+      para toda $x \in l$?\\
+
+      Sea $l \neq l'$ y son coplanares, entonces\\
+
+%  \begin{center}
+    $l \cap l'$ = \{$P$\}\\
+    $P \notin$ \{$A$,$B$,$C$,$A'$,$B'$,$C'$\}\\
+  %\begin{flushleft}
+    Puesto que $A \neq B$ y \{$A$,$B$\} $\subseteq l$\\
+    entonces $l = \overline{AB}$.\\
+    Análogamente, $l' = \overline{A'B'}$.\\
+
+    Así,
+ % \begin{center}
+    $\overline{AB} \cap \overline{A'B'}$ = $l \cap l'$ = \{$P$\}\\
+    entonces $\overline{AB'} \cap \overline{A'B}$ = \{$R$\} $\neq \emptyset$
+
+%  \begin{flushleft}
+    De igual manera,
+  %\begin{center}
+    $\overline{A'C} \cap \overline{AC'}$ = \{$Q$\}\\
+    $R \neq Q$ entonces existe $\overline{RQ}$\\
+
+ % \begin{flushleft}
+    pues si,\\
+  %\begin{center}
+    $R=Q$\\
+    $R \in \overline{AB'} \Rightarrow B' \in \overline{AR}$\\
+    $Q \in \overline{AC'} \Rightarrow C' \in \overline{AQ}$\\
+    $R \in \overline{A'B} \Rightarrow B \in \overline{A'R}$\\
+    $Q \in \overline{A'C} \Rightarrow C \in \overline{A'Q}$\\
+
+    $B' \neq C'$\\
+    \{$B'$,$C'$\} $\subseteq \overline{AR} = \overline{AQ}$ pues $R=Q$\\
+    $\Rightarrow l' = \overline{AR} = \overline{AQ}$\\
+    $\Rightarrow A \in l'$\\
+
+    $B \neq C$\\
+    \{$B$,$C$\} $\subseteq l$\\
+    \{$B$,$C$\} $\overline{A'R} = \overline{A'Q}$ pues $R=Q$\\
+    $\Rightarrow l = \overline{A'R} = \overline{A'Q}$\\
+    %\begin{flushleft}
+      por lo tanto\\
+    %\begin{center}
+      $A' \in l$\\
+ % \begin{flushleft}
+    lo cual es una contradicción, pues,\\
+%  \begin{center}
+    $A \in l$ y $A \in l'$\\
+    $\Rightarrow A = P$\\
+    y $A' \in l'$ y $A' \in l$\\
+    $\Rightarrow A' = P$\\
+    por lo tanto\\
+    $A = A'$ lo cual no es posible.
+    
+
+  
+
+\printindex  
+
+\end{document}
