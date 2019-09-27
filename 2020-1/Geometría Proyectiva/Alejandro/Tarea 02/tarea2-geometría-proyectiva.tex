@@ -1,0 +1,94 @@
+
+  
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Septiembre 2018}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 02}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guia de ejercicios para la Evaluación Parcial 02 }}\\
+\vspace{0.5 cm}
+\end{center}
+
+%\textbf{\large Instrucciones:}
+%\begin{itemize}
+%\item Se sugiere trabajar en equipo los ejercicios y expresar cualquier duda en clase o por correo electrónico.
+%\end{itemize}
+
+\begin{center}
+%\textcolor{red}{\textbf{\large EXAMEN PARCIAL 02\\ VIERNES
+%13-SEPTIEMBRE-2019\\ De 19:00 a 21:00 HORAS - Salón P-213}}
+\end{center}
+
+\begin{enumerate}
+\item Sea $l$ una recta y $\{A,B,C,D\}\subset l$. Demostrar que si $H(A,B;C,D)$ entonces $H(D,C; B,A)$
+
+\item Sea $L$ un punto y $a,b,c,d$ cuatro rectas distintas tales que $a\cap b\cap c\cap d =\{L\}$. Demostrar que si $H(a,b;c,d)$ entonces $H(d,c; b,a)$
+
+\item Sean $\triangle PQR$ , $\{A,A'\}\subset \overline{QR}$ y $\{B, B'\}\subset \overline{PR}$. Demostrar que si $H(A,A';Q,R)$ y $H(B,B';R,P)$ entonces $H(P,Q;C,C')$ donde $\{C\}=\overline{AB'}\cap\overline{BA'}$ y $\{C'\}=\overline{AB}\cap\overline{A'B'}$.
+
+\item Sean $\triangle pqr$ , $a\cap a'=\{ q\cap r\}$ y $b\cap b'=\{p\cap r\}$. Demostrar que si $H(a,a';q,r)$ y $H(b,b';r,p)$ entonces $H(p,q;c,c')$ donde $c=\overline{(a\cap b')(a'\cap b)}$ y $c'=\overline{(a\cap b')(a'\cap b)}$.
+
+
+\item Sean $l$ una recta y $\{A,B,C\}\subset l$ distintos. Construir tres proyectividades  $\lambda, \varphi, \psi $ tales que $\sigma=\psi\circ\varphi\circ\lambda$ cumpla que:
+$$ABC\;\overset{\sigma}{\overline{\wedge}}\; BCA$$
+
+\item Sean $L$ un punto y $a, b , c$ rectas distintas tales que $a\cap b\cap c = \{L\}$. Construir tres proyectividades  $\lambda, \varphi, \psi $ tales que $\sigma=\psi\circ\varphi\circ\lambda$ cumpla que:
+$$abc\;\overset{\sigma}{\overline{\wedge}}\; bca$$
+
+\item Sean $l$ una recta y $\{A,B,C,D\}\subset l$ distintos. Demostrar que existen $\varphi, \psi, \lambda$ proyectividades tales que:
+$$ABCD\; \overset{\lambda}{\overline{\wedge}}\; BADC\; \overset{\varphi}{\overline{\wedge}}\; CDAB \; \overset{\psi}{\overline{\wedge}}\;DCBA$$
+
+\item Sean $L$ un punto y $a,b ,c ,d$ rectas distintas tales que $a\cap b\cap c\cap d=\{L\}$. Demostrar que existen $\varphi, \psi, \lambda$ proyectividades tales que:
+$$abcd\; \overset{\lambda}{\overline{\wedge}}\; badc\; \overset{\varphi}{\overline{\wedge}}\; cdab \; \overset{\psi}{\overline{\wedge}}\;dcba$$
+
+\item Dualizar el teorema de pappus y demostrarlo.
+
+\item Sean $H(a,b;c,d)$ y $H(a',b';c',d)$. Demostrar que existe una única proyectividad $\varphi$ tal que:
+$$abcd\;\overset{\varphi}{\overline{\wedge}}\; a'b'c'd'$$
+
+
+
+\end{enumerate}
+\end{document}
