@@ -1,0 +1,99 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2.25cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Septiembre 2019}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 02}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 02 }}
+\end{center}
+
+\begin{center}
+\textcolor{red}{\textbf{\large EXAMEN PARCIAL 02\\
+LUNES 07 AL VIERNES 11 DE OCTUBRE DE 2019\\
+De 19:00 a 20:00 HORAS - Salón P-213}}
+\vspace{0.5 cm}
+\end{center}
+
+\textbf{Instrucciones}: La segunda evaluación consistirá en resolver todos los ejercicios de la siguiente lista y solamente se evaluarán cuatro de la siguiente manera:
+\begin{itemize}
+\item El \textbf{LUNES 7 DE OCTUBRE DE 2019 A LAS 19:00 HORAS} se entregarán por escrito tres de los ejercicios. Dichos ejercicios deberán elegirse a libre albedrío.
+\item En la semana que comprende del \textbf{LUNES 07 AL VIERNES 11 DE OCTUBRE DE 2019} en el horario de clase se elegirá al azar el cuarto ejercicio que deberán exponer con lujo de detalle al grupo y que no podrá ser uno de los tres ejercicios que se entregaron previamente.\\
+\end{itemize}
+
+\begin{enumerate}
+\item Sea $l$ una recta y $\{A,B,C,D\} \subseteq l$ un conjunto de cuatro puntos distintos. Demostrar que si $H(A,B;C,D)$ entonces $H(D,C; B,A)$.
+
+\item Sea $L$ un punto y $a\cap b\cap c\cap d =\{L\}$ un conjunto de cuatro rectas distintas. Demostrar que si $H(a,b;c,d)$ entonces $H(d,c; b,a)$
+
+\item Sea $\triangle PQR$ donde $p = \overline{QR}$, $q=\overline{RP}$ y $r=\overline{PQ}$. Demostrar que si $\{A,A'\}\subseteq p$, $\{B, B'\}\subseteq q$, $\overline{AB'}\cap\overline{BA'}=\{C\}$, $\overline{AB}\cap\overline{A'B'}=\{C'\}$ tales que $H(A,A';Q,R)$ y $H(B,B';R,P)$ entonces $H(P,Q;C,C')$.
+
+\item Sea $\triangle pqr$ donde $q \cap r= \{P\}$, $r \cap p =\{Q\}$ y $p \cap q =\{R\}$. Demostrar que si $a \cap a' = \{P\}$, $b \cap b' = \{q\}$, $\overline{(a \cap b')(b \cap a')}=c$, $\overline{(a \cap b)(a' \cap b')}=c'$ tales que $H(a,a';q,r)$ y $H(b,b';r,p)$ entonces $H(p,q;c,c')$.
+
+\item Sea $\{A,B,C\}\subseteq l$ un conjunto de puntos distintos. Construir tres perspectividades $\alpha: l \to l$, $\beta:l \to l$ y $\gamma: l \to l$ tales que $\phi=\gamma \circ \beta \circ \alpha$ cumpla que $ABC\;\overset{\phi}{\overline{\wedge}}\; BCA$.
+
+\item Sea $a \cap b \cap c = \{L\}$ un conjunto de rectas distintas. Construir tres perspectividades $\alpha: \Omega_L \to \Omega_L$, $\beta:\Omega_L \to \Omega_L$ y $\gamma: \Omega_L \to \Omega_L$ tales que $\phi=\gamma \circ \beta \circ \alpha$ cumpla que $abc\;\overset{\phi}{\overline{\wedge}}\; bca$.
+
+\item Sea $\{A,B,C,D\}\subseteq l$ un conjunto de puntos distintos. Demostrar que existen proyectividades $\alpha: l \to l$, $\beta: l \to l$ y $\gamma:l \to l$ tales que:
+$$ABCD\; \overset{\alpha}{\overline{\wedge}}\; BADC\; \overset{\beta}{\overline{\wedge}}\; CDAB \; \overset{\gamma}{\overline{\wedge}}\;DCBA$$
+
+\item Sea $a \cap b \cap c \cap d =\{L\}$ un conjunto de rectas distintas. Demostrar que existen proyectividades $\alpha: \Omega_L \to \Omega_L$, $\beta: \Omega_L \to \Omega_L$ y $\gamma:\Omega_L \to \Omega_L$ tales que:
+$$abcd\; \overset{\alpha}{\overline{\wedge}}\; badc\; \overset{\beta}{\overline{\wedge}}\; cdab \; \overset{\gamma}{\overline{\wedge}}\;dcba$$
+
+\item Demostrar que si $H(a,b;c,d)$ y $H(a',b';c',d)$ entonces existe una única proyectividad $\varphi$ tal que
+$$abcd\;\overset{\varphi}{\overline{\wedge}}\; a'b'c'd'$$
+
+\item Dualizar el Teorema de Pappus y demostrarlo.
+
+\item Demostrar que si $\triangle ABC$ está en perspectiva desde $L$ con el $\triangle DEF$ y $\triangle ABC$ está en perspectiva desde $M$ con el $\triangle EFD$ entonces existe un punto $N$ tal que $\triangle ABC$ está en perspectiva desde $N$ con el $\triangle FDE$.
+
+\item Demostrar que si $\triangle abc$ está en perspectiva desde $l$ con el $\triangle def$ y $\triangle abc$ está en perspectiva desde $m$ con el $\triangle efd$ entonces existe una recta $n$ tal que $\triangle abc$ está en perspectiva desde $n$ con el $\triangle fde$.
+\end{enumerate}
+\end{document}
