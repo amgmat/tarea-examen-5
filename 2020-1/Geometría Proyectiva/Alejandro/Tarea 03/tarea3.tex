@@ -1,0 +1,77 @@
+
+  
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Octubre 2018}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 03}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guia de ejercicios para la Evaluación Parcial 03 }}\\
+\vspace{0.5 cm}
+\end{center}
+
+%\textbf{\large Instrucciones:}
+%\begin{itemize}
+%\item Se sugiere trabajar en equipo los ejercicios y expresar cualquier duda en clase o por correo electrónico.
+%\end{itemize}
+
+\begin{center}
+%\textcolor{red}{\textbf{\large EXAMEN PARCIAL 02\\ VIERNES
+%13-SEPTIEMBRE-2019\\ De 19:00 a 21:00 HORAS - Salón P-213}}
+\end{center}
+
+\begin{enumerate}
+\item Sea $L$ un punto en $\p^3$. Demostrar que existe $\varphi : \Omega_L \to \Omega_L$ proyectividad que deja fijo dos rectas de $\Omega_L$.
+
+\item Sea $L$ un punto en $\p^3$. Demostrar que existe $\psi : \Omega_L \to \Omega_L$ proyectividad que deja fijo una rectas de $\Omega_L$.
+
+\item $L, M$ dos puntos en $\p^3$, $\varphi: \Omega_L\to \Omega_L$ proyectividad tal que  $\varphi =\beta\circ\alpha$, con $\alpha: \Omega_L\to\Omega_M$, $\beta: \Omega_M\to \Omega_L$ y $\Gamma = \{x\in\Omega_L\; | \; \varphi(x)= x\}$.
+Demostrar que si $n=\overline{LM}$ es la única recta que cumple que $\alpha(n)=n=\beta(n)$  entonces $|\Gamma|\geq 2$
+
+\item Sean $L, M$ en $\p^3$, $\varphi:\Omega_{L}\to\Omega_{L}$ y $\psi: \Omega_{L}\to \Omega_L$. Demostrar que si  $\overline{LM}=n$ es la única recta tal que \\
+$\varphi(n)=n=\psi(n)$ entonces $\psi\circ\varphi$ es una proyectividad que deja fija únicamente a $n$ o $\psi\circ\varphi = Id_{\Omega_L}$
+
+
+\end{enumerate}
+\end{document}
