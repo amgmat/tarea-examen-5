@@ -1,0 +1,99 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2.25cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Octubre 2019}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 03}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 03}}
+\end{center}
+
+\begin{center}
+\textcolor{red}{\textbf{\large EVALUACIÓN PARCIAL 03\\
+LUNES 14 AL VIERNES 18 DE OCTUBRE DE 2019\\
+De 19:00 a 20:00 HORAS - Salón P-213}}
+\vspace{0.5 cm}
+\end{center}
+
+\textbf{Instrucciones}: La tercera evaluación consistirá en resolver todos los ejercicios de la siguiente lista y solamente se evaluarán cuatro de la siguiente manera:
+\begin{itemize}
+\item El \textbf{VIERNES 18 DE OCTUBRE DE 2019 A LAS 19:00 HORAS} se entregarán por escrito tres de los ejercicios. Dichos ejercicios deberán elegirse a libre albedrío.
+\item En la semana que comprende del \textbf{LUNES 14 AL VIERNES 18 DE OCTUBRE DE 2019} en el horario de clase se elegirá al azar el cuarto ejercicio que deberán exponer con lujo de detalle al grupo y que no podrá ser uno de los tres ejercicios que se entregarán.\\
+\end{itemize}
+
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item Sea $l$ una recta en un plano y $A \in l$. Construir una proyectividad $\phi:l \to l$ tal que $\phi(A)=A$ y para cualquier $X \in l\setminus\{A\}$ se tenga que $\phi(X) \neq X$.
+\item Sea $L$ un punto en el plano, $\{a,b\} \subseteq \Omega_L$. Construir una proyectividad $\phi:\Omega_L \to \Omega_L$ tal que para $x \in \{a,b\}$ se cumpla que $\phi(x)=x$ y para cualquier $p \in \Omega_L \setminus\{a,b\}$, $\phi(p) \neq p$.
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item Sea $l$ una recta en un plano, $\{A,B\} \subseteq l$. Construir una proyectividad $\phi:l \to l$ tal que para $X \in \{A,B\}$ se cumpla que $\phi(X)=X$ y para cualquier $P \in l \setminus\{A,B\}$, $\phi(P) \neq P$.
+\item Sea $L$ un punto en un plano y $a \in \Omega_L$. Construir una proyectividad $\phi:\Omega_L\to \Omega_L$ tal que $\phi(a)=a$ y para cualquier $X \in l\setminus\{A\}$ se tenga que $\phi(X) \neq X$.
+\end{enumerate}
+
+\item Demostrar que si $\psi: \Omega_L \to \Omega_L$ es una perspectividad entonces $\psi= Id_{\Omega_L}$. 
+
+\item Demostrar que si $\alpha: \Omega_L \to \Omega_M$ y $\beta: \Omega_M \to \Omega_L$ son perspectividades entonces $\beta \circ \alpha$ es una proyectividad con al menos dos puntos fijos.
+
+\item Sea $\{A,B,C,D,E,F\} \subseteq l$. Demostrar que existe una proyectividad $\psi:l \to l$ tal que \linebreak $AEFC\;\overset{\psi}{\overline{\wedge}}\; BDCF$ si y solamente si $(AD)(BE)(CF)$ es un conjunto cuadrangular.
+
+\item Demostrar que toda proyectividad $\psi:l \to l$ es composición de a lo más tres perspectividades.
+
+\item Demostrar que si $\psi:l \to l$ es una proyectividad elíptica entonces $\psi$ es composición de tres perspectividades.
+
+\item Demostrar que si $\alpha: \Omega_L \to \Omega_L$ y $\beta:\Omega_L \to \Omega_L$ son  proyectividades parabólicas tales que $\alpha(a)=a=\beta(a)$ entonces $\alpha \circ \beta$ es una proyectividad parabólica o $\alpha \circ \beta = Id_{\Omega_L}$.
+
+\item Sea $\phi:l \to l$ una proyectividad tal que $\psi(A)=A$ y para algún $B \in l\setminus\{A\}$, $\phi(B)=B'$, $\phi^2(B)=B''$. Demostrar que si $H(B',A;B,B'')$ entonces $\phi$ es una proyectividad parabólica.
+
+\end{enumerate}
+\end{document}
