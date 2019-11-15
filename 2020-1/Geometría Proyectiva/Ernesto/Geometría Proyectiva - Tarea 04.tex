@@ -1,0 +1,95 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2.25cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Noviembre 2019}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 04}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 04}}
+\end{center}
+
+\begin{center}
+\textcolor{red}{\textbf{\large TAREA EXAMEN PARCIAL 04\\
+MARTES 19 DE NOVIEMBRE DE 2019\\
+De 19:00 a 20:00 HORAS - Salón P-213}}
+\vspace{0.5 cm}
+\end{center}
+
+\textbf{Instrucciones}: La cuarta evaluación consistirá en resolver y entregar por escrito cinco de los siguientes diez ejercicios.
+
+\begin{enumerate}
+\item Sean $\{A,B,C,D,E,F\}\subseteq l$ y las involuciones
+\begin{itemize}
+\item $\varphi: l\to l$ tal que $(AB)(DE)$
+\item $\psi: l\to l$ tal que $(BC)(EF)$
+\item $\lambda: l\to l$ tal que $(CD)(FA)$
+\end{itemize}
+Demostrar que si dos de estas involuciones tiene un par de puntos en común entonces las tres tienen un par de puntos en común.
+
+\item Sea $\{A,M,N\}\subseteq l$ tal que $|\{A,M,N\}|=3$. Demostrar que si $D \in l \setminus\{M,N\}$ entonces la proyectividad $AMN \overline{\wedge} DMN$ es la composición de las involuciones $(AX)(MN)$ y $(DX)(MN)$ para cualquier $X \in l \setminus\{M,N\}$.
+
+\item Sea $\{A,A',B,B'\}\subseteq l$. Demostrar que la involución $(AA')(BB')$ puede ser expresada como la composición de las involuciones $(AB)(A'B')$ y $(AB')(BA')$.
+
+\item Sea $\{A,A',A'',A'''\}\subseteq l$. Demostrar que cualquier proyectividad que no es una involución puede ser expresada como la composición de las involuciones $(AA'')(A'A')$ y $(AA''')(A'A'')$.
+
+\item Sea $\{A,B,C,D\} \subset l$. Demostrar que si existe la proyectividad $ABCD \overline{\wedge} BACD$ entonces $H(A,B; C,D)$.
+
+\item Sean $\{A,D,B,E,M,N\}\subset l$. Demostrar que si $H(A,B; M,N)$ y $H(D,E;M,N)$ entonces $M,N$ es un par de puntos de la involución $(AD)(BE)$.
+
+\item Sean $\{A,B,C,D,E,F\}\subseteq l$ y $\{P,Q\}\subseteq l\setminus \{A,B,C,D,E,F\}$. Demostrar que si $(AD)(BE)(CF)$ y $A',B',C',D',E', F'$ son los conjugado armónicos de $A,B,C,D,E,F$ con respecto a $P, Q$  respectivamente entonces $(A'D')(B'E')(C'F')$.
+
+\item Sea $\{A,B,C,D,E,F\}\subseteq l$. Demostrar que si $ABCD \overline{\wedge} ABDE$ y $H(C,E;D,F)$ entonces $H(A,B;D,F)$.
+
+\item Sean $\{A,B,C,D,E,F\}\subseteq l$. Demostrar que si $H(B,C;A,D)$, $H(C,A;B,E)$ y $H(A,B;C,F)$ entonces $(AD)(BE)(CF)$.
+
+\item Demostrar que toda involución con un punto fijo es involución hiperbólica.
+
+\end{enumerate}
+\end{document}
