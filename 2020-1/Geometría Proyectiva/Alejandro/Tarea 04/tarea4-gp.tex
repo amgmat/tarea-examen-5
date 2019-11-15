@@ -1,0 +1,83 @@
+
+  
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Noviembre 2018}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 04}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guia de ejercicios para la Evaluación Parcial 04 }}\\
+\vspace{0.5 cm}
+\end{center}
+
+%\textbf{\large Instrucciones:}
+%\begin{itemize}
+%\item Se sugiere trabajar en equipo los ejercicios y expresar cualquier duda en clase o por correo electrónico.
+%\end{itemize}
+
+\begin{center}
+%\textcolor{red}{\textbf{\large EXAMEN PARCIAL 02\\ VIERNES
+%13-SEPTIEMBRE-2019\\ De 19:00 a 21:00 HORAS - Salón P-213}}
+\end{center}
+
+\begin{enumerate}
+\item Sean $\{A,B,C,D,E,F\}\subset l$. y las involuciones $\varphi: l\to l$ tal que $(AB)(DE)$, $\psi: l\to l$ tal que $(BC)(EF)$ y $\lambda: l\to l$ tal que $(CD)(FA)$. Demostrar que si dos de estas involuciones tiene un par de puntos en común entonces las tres tienen un par en común
+
+\item Sean $\{A,M,N\}\subset l$. Demostrar que la proyectividad $MNA\overline{\wedge} MNA'$ es el producto de las involuciones $(AB)(MN)$ y $(A'B)(MN)$ donde $B$ es un punto arbitriario en $l$.
+
+\item Sean $\{A,A',B,B'\}\subset l$. Demostrar que la involucion $(AA')(BB')$ puede ser expresado como el producto de $(AB)(A'B')$ y $(AB')(BA')$.
+
+\item Sean $\{A,A',A'',A'''\}\subset l$. Demostrar que cualquier proyectividad que no es una involución puede ser expresado como el producto de $(AA'')(A'A')$ y $(AA''')(A'A'')$.
+
+\item Sean $\{A,B,C,D\}\subset l$. Demostrar que si existe la proyectividad $ABCD \overline{\wedge} BACD$ entonces $H(A,B; C,D)$.
+
+\item Sean $\{A,A',B,B',M,N\}\subset l$. Demostrar que si $H(A,B; M,N)$ y $H(A',B';M,N)$ entonces $M,N$ es un par de la involución $(AA')(BB')$.
+
+\item Sean $\{A,B,C,D,E,F, P,Q\}\subset l$. Demostrar que si $(AD)(BE)(CF)$ y $A',B',C',D',E', F'$ son los conjugado armonico de $A,B,C,D,E,F$ con respecto a $P, Q$  respectivamente entonces $(A'D')(B'E')(C'F')$.
+
+\item Sean $\{A,B,C,D,E,F\}\subset l$. Demostrar que si $ABCD \overline{\wedge} ABDE$ y $H(C,E;D,F)$ entonces $H(A,B;D,F)$.
+
+\item Sean $\{A,B,C,D,E,F\}\subset l$. Demostrar que si $H(B,C;AD)$, $H(C,A;B,E)$ y $H(A,B;C,F)$ entonces $(AD)(BE)(CF)$.
+\end{enumerate}
+\end{document}
