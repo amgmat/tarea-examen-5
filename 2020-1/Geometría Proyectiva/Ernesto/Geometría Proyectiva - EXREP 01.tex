@@ -1,0 +1,75 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2.25cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Geometría Proyectiva}}
+\fancyhead[LE,RO]{\bfseries{2020-1}}
+\fancyfoot[RE,RO]{\bfseries{Noviembre 2019}}
+\fancyfoot[LE,LO]{\bfseries{Reposición Evaluación Parcial 01}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Reposición Evaluación Parcial 01}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large FECHA DE ENTREGA \\ MIÉRCOLES 20-NOVIEMBRE-2019\\ De 17:00 a 19:00 HORAS - Salón P-213}}
+\end{center}
+
+\textbf{Instrucciones}: Resolver y entregar tres de los siguientes cinco ejercicios. De entregar más de tres ejercicios se anularán los ejercicios de mayor puntaje.
+
+
+\begin{enumerate}
+\item Sean $l$ una recta y $\pi$ un plano en $\p^3$. Demostrar que si $l \not\subseteq \pi$ y $l \cap \pi \neq \emptyset$ entonces $|l\cap \pi|= 1$.
+
+\item Demostrar que si tres triángulos están en perspectiva desde un mismo punto entonces los tres ejes de perspectiva, que determinan los triángulos por pares, son tres rectas concurrentes.
+
+\item Demostrar que si dos cuadrángulos completos determinan el mismo conjunto cuadrangular entonces sus triángulos diagonales están en perspectiva.
+
+\item Sea $\pi$ un plano en $\p^3$ y $\{A,B,C,D,E,F\} \subseteq \pi$ tales que $\{A,B,C\}$ y $\{D,E,F\}$ son puntos en posición general. Demostrar que $\pi_{ABC}=\pi_{DEF}$.
+
+\item Construir un cuadrángulo completo que tenga a un triángulo dado como triángulo diagonal.
+\end{enumerate}
+
+\end{document}
