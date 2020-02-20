@@ -1,0 +1,92 @@
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Teoría de Gráficas}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Febrero 2020}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 01}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Ejercicios para al Evaluación Parcial 01}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large FECHA DE ENTREGA \\ VIERNES 28- FEBRERO-2020\\ De 9:00 a 10:00 HORAS - Salón P-118}}
+\end{center}
+
+\textbf{Instrucciones}: Resolver
+
+\vspace{1cm}
+
+\begin{enumerate}
+\item Sea $G$ una gráfica de orden $n$ y de tamaño $m$.
+\begin{enumerate}
+\item Demostrar que $m \leq {n \choose 2}$ y determinar cuando se da la igualdad.
+\item Demostrar que $m \leq \frac{n^2}{4}$
+\end{enumerate}
+\item Demostrar que la relación de isomorfismos $(\cong)$ entre gráficas es de equivalencia, es decir:\\
+Sean $G$,$H$ y $I$ gráficas
+\begin{itemize}
+\item Demostrar que $G \cong G$
+\item Demostrar que si $G\cong H$ entonces $H\cong G$
+\item Demostrar que si $G\cong H$ y $H\cong I$ entonces $G\cong I$.
+\end{itemize}
+\item Demostrar que una gráfica completa de orden $n$ es única.
+\item Sean $G$ y $H$ gráficas tal que $H\cong G$. Si $\varphi$ es el isomorfismo entre $G$ y $H$ entonces para cualquier $x\in G$ se tiene que $d_G(x) = d_H(\varphi(x))$
+\item Sea $G[X,Y]$ una gráfica bipartita de orden $n$ y de tamaño $m$, donde $|X|= r$, $|Y|=s$. Demostrar que
+$m\leq rs$.
+
+\item Sea $G$ una gráfica. Demostrar que $C$ es un ciclo de $G$ cuya gráfica que induce es bipartita $\Leftrightarrow $ su longitud es par.
+
+\item Demostrar que si $G$ es un gráfica no conexa entonces $\overline{G}$ es conexa. ¿Qué sucede con el regreso?.
+
+\item Sea $G$ una gráfica conexa. Demostrar que para toda $H$ gráfica tal que $G\cong H$ entonces $H$ es conexa.
+
+\item Demostrar la siguiente proposición o dar un contraejemplo en caso de que sea falsa. 
+Sea $G$ una gráfica $k$-regular. Si $K$ es impar entonces $G$ tiene un número impar de vértices.
+
+\item Sea $G[X,Y]$ una gráfica bipartita. Demostrar que:
+\begin{itemize}
+\item $\Sigma_{v\in X} d(v) = \Sigma_{v\in Y} d(v)$.
+\item Si $G$ es k-regular con $k>1$ entonces $|X|=|Y|$.
+\end{itemize}
+\end{enumerate}
+
+
+\end{document}
