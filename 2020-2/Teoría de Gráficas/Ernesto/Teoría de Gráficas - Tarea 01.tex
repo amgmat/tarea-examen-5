@@ -80,11 +80,11 @@ Demostrar que la relación $G \sim H$ si y solamente si $G \cong H$, es una rela
 
 % EXMEN \item Sean $G$ y $H$ gráficas tal que $G \cong H$. Demostrar que si $\varphi$ es el isomorfismo entre $G$ y $H$ entonces para cualquier $x \in V(G)$ se tiene que $d_G(x) = d_H(\varphi(x))$.
 
-\item Demuestra que todo camino con extremos $x$ y $y$ contiene una trayectoria con extremos $x$ y $y$.
-
 \item ¿Qué relación existe entre $K_1$ y $K_{1,1}$?
 
-\item Demostrar que en toda gráfica se cumple que $|A(G)| \leq {|V(G)|\choose 2}$. ¿En qué caso se da la igualdad?
+\item Demuestra que todo camino con extremos $x$ y $y$ contiene una trayectoria con extremos $x$ y $y$.
+
+\item Demostrar que en toda gráfica $G$ se cumple que $|A(G)| \leq {|V(G)|\choose 2}$. ¿En qué caso se da la igualdad?
 
 \item Considerar a $G[X,Y]$ para demostrar que:
 \begin{itemize}
@@ -95,8 +95,8 @@ Demostrar que la relación $G \sim H$ si y solamente si $G \cong H$, es una rela
 
 \item Sea $G$ una gráfica. Considerar lo siguiente:
 \begin{itemize}
-\item $\delta (G) : = \min(\{d_G(x) \in \N \cup \{0\} \; | \; x \in V(G) \})$\footnote{A $\delta(G)$ se le conoce como el \textbf{gradro mínimo de $G$}.}
-\item $\Delta (G) : = \max(\{d_G(x) \in \N \cup \{0\} \; | \; x \in V(G) \})$\footnote{A $\Delta(G)$ se le conoce como el \textbf{gradro máximo de $G$}.}
+\item $\delta (G) : = \min(\{d_G(x) \in \N \cup \{0\} \; | \; x \in V(G) \})$\footnote{A $\delta(G)$ se le conoce como el \textbf{grado mínimo de $G$}.}
+\item $\Delta (G) : = \max(\{d_G(x) \in \N \cup \{0\} \; | \; x \in V(G) \})$\footnote{A $\Delta(G)$ se le conoce como el \textbf{grado máximo de $G$}.}
 \end{itemize}
 Demostrar que $$ \delta(G) \leq \frac{2 |A(G)|}{|V(G)|} \leq \Delta(G)$$
 
@@ -106,7 +106,7 @@ Demostrar que $$ \delta(G) \leq \frac{2 |A(G)|}{|V(G)|} \leq \Delta(G)$$
 \item Sea $n \in \N \setminus \{0\}$, considerar $Q_n = (V(Q_n), A(Q_n))$ donde $X=\{0,1\}$ y
 \begin{itemize}
 \item $V(Q_n) = X^n $
-\item $\{x,y\} \in A(Q_n) \Leftrightarrow$ $x$ difiere de $y$ es exactamente una entrada. 
+\item $\{x,y\} \in A(Q_n) \Leftrightarrow$ $x$ difiere de $y$ en exactamente una coordenada. 
 \end{itemize}
 \begin{enumerate}
 \item Dar un diagrama de $Q_n$ para $n \in \{1,2,3,4\}$
@@ -152,7 +152,7 @@ Demostrar que $$ \delta(G) \leq \frac{2 |A(G)|}{|V(G)|} \leq \Delta(G)$$
 %EXAMEN
 \item
 \begin{itemize}
-\item Demostrar que en cualquier gráfica $G$, si $\frac{n-2}{2} < \delta(G)$ entonces $G$ es conexa.
+\item Demostrar que en cualquier gráfica $G$, si $\frac{|V(G)|-2}{2} < \delta(G)$ entonces $G$ es conexa.
 \item Encontrar, para cada $n \in \N$ par positivo, una gráfica disconexa $G$ que sea $(\frac{n-2}{2})$-regular.
 \end{itemize}
 
