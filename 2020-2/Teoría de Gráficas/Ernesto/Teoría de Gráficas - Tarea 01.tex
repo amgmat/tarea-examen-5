@@ -78,6 +78,8 @@ Demostrar que la relación $G \sim H$ si y solamente si $G \cong H$, es una rela
 
 \item Demostrar que, salvo isomorfismo, para cualquier $\{n,m\} \subseteq \N \setminus\{0\}$ si $|X| = n$ y $|Y|=m$ entonces la gráfica bipartita completa $G[X,Y]$ es única.\footnote{Por ello, a la gráfica bipartita completa $G[X,Y]$ la denotaremos como $K_{|X|,|Y|}$.}
 
+% EXMEN \item Sean $G$ y $H$ gráficas tal que $G \cong H$. Demostrar que si $\varphi$ es el isomorfismo entre $G$ y $H$ entonces para cualquier $x \in V(G)$ se tiene que $d_G(x) = d_H(\varphi(x))$.
+
 \item Demuestra que todo camino con extremos $x$ y $y$ contiene una trayectoria con extremos $x$ y $y$.
 
 \item ¿Qué relación existe entre $K_1$ y $K_{1,1}$?
@@ -98,6 +100,40 @@ Demostrar que la relación $G \sim H$ si y solamente si $G \cong H$, es una rela
 \end{itemize}
 Demostrar que $$ \delta(G) \leq \frac{2 |A(G)|}{|V(G)|} \leq \Delta(G)$$
 
+% EXAMEN \item Describir, por medio de una gráfica, a un grupo de cinco amigos en los que cualesquiera dos de ellos tienen exactamente un amigo en común. ¿Es posible hacer lo mismo con un grupo de cuatro amigos?
+
+%EXAMEN
+\item Sea $n \in \N \setminus \{0\}$, considerar $Q_n = (V(Q_n), A(Q_n))$ donde $X=\{0,1\}$ y
+\begin{itemize}
+\item $V(Q_n) = X^n $
+\item $\{x,y\} \in A(Q_n) \Leftrightarrow$ $x$ difiere de $y$ es exactamente una entrada. 
+\end{itemize}
+\begin{enumerate}
+\item Dar un diagrama de $Q_n$ para $n \in \{1,2,3,4\}$
+\item Determinar el orden y el tamaño de $Q_n$ para toda $n \in \N \setminus \{0\}$.
+\item Demostrar que para toda $n \in \N \setminus \{0\}$ se tiene que $Q_n$ es bipartita.
+\end{enumerate}
+
+\newpage
+
+%EXAMEN
+\item Sea $n \in \N \setminus \{0\}$, considerar $B_n = (V(B_n), A(B_n))$ donde $X=\{m \in \N \setminus \{0\} \; | \; 1 \leq m \leq n\}$ y
+\begin{itemize}
+\item $V(B_n) = \wp(X) $
+\item $\{x,y\} \in A(B_n) \Leftrightarrow$ $|x \triangle y|=1$.\footnote{$x \triangle y = (x \setminus y) \cup (y \setminus x)$}
+\end{itemize}
+\begin{enumerate}
+\item Dar un diagrama de $B_n$ para $n \in \{1,2,3,4\}$
+\item Determinar el orden y el tamaño de $B_n$ para toda $n \in \N \setminus \{0\}$.
+\item Demostrar que para toda $n \in \N \setminus \{0\}$ se tiene que $B_n$ es bipartita.
+\end{enumerate}
+
+\item Considerar $G[X,Y]$ para demostrar que:
+\begin{itemize}
+\item $\mathop \sum \limits_{v \in X} d_G(v) = \mathop \sum \limits_{v \in Y} d_G(v)$
+\item Si $G[X,Y]$ es $k$-regular, con $k \in \N \setminus \{0\}$, entonces $|X| =|Y|$. 
+\end{itemize}
+
 
 \item Demostrar que para una gráfica $G$ las siguientes son equivalentes:
 \begin{itemize}
@@ -106,7 +142,29 @@ Demostrar que $$ \delta(G) \leq \frac{2 |A(G)|}{|V(G)|} \leq \Delta(G)$$
 \item Existe un camino cerrado en $G$ que contiene a todos los vértices y a todas las aristas de $G$.
 \end{itemize}
 
-\item 
+%EXAMEN
+\item
+\begin{itemize}
+\item Demostrar que en cualquier gráfica $G$, si ${|V(G)| -1 \choose 2} < |A(G)|$ entonces $G$ es conexa.
+\item Encontrar, para cada $n \in \N \setminus \{0,1\}$, una gráfica disconexa $G$ de orden $n$ tal que ${|V(G)| -1 \choose 2} = |A(G)|$.
+\end{itemize}
+
+%EXAMEN
+\item
+\begin{itemize}
+\item Demostrar que en cualquier gráfica $G$, si $\frac{n-2}{2} < \delta(G)$ entonces $G$ es conexa.
+\item Encontrar, para cada $n \in \N$ par positivo, una gráfica disconexa $G$ que sea $(\frac{n-2}{2})$-regular.
+\end{itemize}
+
+%EXAMEN
+\item Demostrar o dar contraejemplo de las siguientes proposiciones:
+\begin{itemize}
+\item $\overline{G}$ es conexa $\Rightarrow$ $G$ es disconexa. 
+\item $G$ es disconexa $\Rightarrow$ $\overline{G}$ es conexa. 
+\end{itemize}
+
+%EXAMEN \item Demostrar que, para cualquier $n \in \N \setminus \{0\}$, $Q_n \cong B_n$.
+
 
 \end{enumerate}
 
