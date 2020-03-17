@@ -1,0 +1,90 @@
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Seminario de Geometría}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2020}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 01}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textbf{\LARGE {SEMINARIO DE GEOMETRÍA B}}
+\end{center}
+
+\begin{center}
+\textbf{\large MARZO 2020}\\
+\end{center}
+
+\begin{center}
+\textbf{{\large TAREA}}
+\end{center}
+
+{\bf INSTRUCCIONES: }
+\begin{itemize}
+\item Justificar y argumentar todos los resultados que se realicen
+\end{itemize}
+
+\begin{center}
+\rule[0mm]{20cm}{0.2mm}
+\end{center}
+
+%\vspace{1cm}
+\begin{enumerate}
+\item Definir la orientación de una isometría y  usando esa definición demostrar que las reflexiones invierten orientación.
+
+\item Determinar el conjunto de puntos fijos de una reflexión, una rotación, una traslación y un deslizamiento.
+
+\item Sean $\{x, y\}\subset \R^2$. Demostrar que existe una traslación, una reflexión, una rotación y un deslizamiento que mande $x$ en $y$.¿Es única la traslación, la reflexión, la rotación y el deslizamiento con dicha propiedad?. En caso de que no sea única indicar cuantas hay.
+
+\item Demostrar que $\forall f\in Iso(\E^2)$ entonces existe $g\in Stab_{Iso(\E^2)}(0)$ y $t_u \in T(E^2)$ tal que
+$$f= t_u \circ g$$
+
+\item Justificar porque el espacio del $ Stab_{Iso(\E^2)}(0)$ es $S^2 \times Z_2$
+
+\item Demostrar que existe una función biyectiva $\varphi: Iso(\E^2) \to S^2 \times Z_2 \times R^2$.
+
+\item Encontrar una operación $*$ en $S^2 \times Z_2 \times R^2$ tal que 
+$$(Iso(\E^2), \circ, Id_{Iso(\E^2)}) \cong( S^2 \times Z_2 \times R^2, *, e)$$
+donde $e$ es el elemento neutro de $S^2 \times Z_2 \times R^2$ con respecto a $*$
+\end{enumerate}
+
+
+
+\end{document}
