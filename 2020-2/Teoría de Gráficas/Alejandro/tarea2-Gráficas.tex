@@ -1,0 +1,92 @@
+\documentclass[12pts]{report}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Teoría de Gráficas}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2020}}
+\fancyfoot[LE,LO]{\bfseries{Tarea 02}}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+\newcommand{\h}{\mathbb H}
+
+\begin{document}
+\begin{center}
+\textbf{\LARGE {TEORÍA DE GRÁFICAS}}
+\end{center}
+
+\begin{center}
+\textbf{\large MARZO 2020}\\
+\end{center}
+
+\begin{center}
+\textbf{{\large TAREA}}
+\end{center}
+
+{\bf INSTRUCCIONES: }
+\begin{itemize}
+\item Justificar y argumentar todos los resultados que se realicen
+\end{itemize}
+
+\begin{center}
+\rule[0mm]{20cm}{0.2mm}
+\end{center}
+
+%\vspace{1cm}
+\begin{enumerate}
+\item Sea $G$ una gráfica. Si para todo $v\in V(G)$ se tiene que $d_G(v)\geq 2$ entonces $G$ contiene un ciclo.
+
+
+\item Sea $G$ una gráfica. Si $G$ es un bloque tal que $|V(G)|\geq 3$ y $\{u,v\}\subset V(G)$ tal que $v\neq u$. Dada $T_{uv}$ una trayectoria con extremos $u$ y $v$ en $G$. ¿Siempre existe una trayectoria $T_{uv}^{*}$ con extremos $u$ y $v$ tal que sea ajena a $T_{uv}$ excepto en los vértices $u$ y $v$?
+
+\item Sea $G$ una gráfica con cuatro bloques tal que $V(G)=\{v_1,v_2,\dots, v_8\}$. Supongamos que todo $v_i\; 1\leq i \leq 6$ está en exactamente en un bloque y que $v_7$ y $v_8$ pertenecen exactamente a dos bloques. Demostrar que $G$ es disconexa.
+
+\item Sean $G$ una gráfica y $v\in V(G)$. Si $v$ es vértice de corte en $G$, entonces $v$ no es vertice de corte en $\overline{G}$
+
+\item Sea $G$ una gráfica conexa con uno o más vértices de corte. Demostrar que $G$ contiene por lo menos dos bloques, cada uno de los cuales contiene exactamente un vértice de corte de $G$. (Los bloques de una gráfica que contienen exactamente un vértice de corte de dicha gráfica se llaman BLOQUES TERMINALES de G).
+
+
+\item Sea $G$ una gráfica conexa con al menos un vértice de corte. Demuestra que $G$ contiene un vértice de corte $v$ con la propiedad de que, con a lo más una excepción, todos los bloques que contienen a $v$ son bloques terminales.
+\item Sea $G$ es una gráfica. Si $G$ no tiene ciclos pares, entonces todo bloque de $G$ es $K_2$ o un ciclo impar.
+
+\item Sea $G$ una gráfica. Demuestra que el número de bloques de una gráfica $G$ es igual a $c(G)+ \sum_{v\in V(G)}(b(v)-1)$ donde $b(v)$ es el número de bloques de $G$ que contienen a $v$.
+\item Sea $G$ una gráfica. Demuestra que si $G$ es conexa tal que tiene exactament dos vértices que no son de corte entonces $G$ es una trayectoria.
+\item Sea $G$ es una gráfica. Demuestra que si $a\in A(G)$, entonces $$c(G)\leq c(G\backslash \{a\}) \leq c(G)+1$$
+\end{enumerate}
+
+
+
+\end{document}
