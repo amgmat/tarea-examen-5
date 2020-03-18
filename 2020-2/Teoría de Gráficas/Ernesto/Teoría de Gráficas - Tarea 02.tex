@@ -1,0 +1,140 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Teoría de Gráficas}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2020}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 02}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 02}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large FECHA DE EVALUACIÓN PARCIAL 02 \\ VIERNES 03-ABRIL-2020\\ 12:00 HORAS}}
+\end{center}
+
+\textbf{Instrucciones}: La siguiente lista que fungirá como guía para el examen parcial, se recomienda resolver todos los ejercicios de la misma.
+
+\vspace{1cm}
+
+
+\begin{center}
+\textcolor{blue}{\textbf{\large LISTA DE EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item Demostrar que toda gráfica autocomplementaria\footnote{$G$ es una gráfica \textbf{autocomplementaria} si y solamente si $G \cong \overline G$.} es conexa.
+
+\item Demostrar que si $G$ es una gráfica autocomplementaria entonces $|V(G)| \equiv x \mod 4$ donde $x \in \{0,1\}$.
+
+\item Construir, para cada $k \in \mathbb N$, una gráfica autocomplementaria de orden $4k$.
+
+\item Construir, para cada $k \in \mathbb N$, una gráfica autocomplementaria de orden $4k+1$.
+
+%\item Demostrar que toda gráfica autocomplementaria con $4k+1$ vértices tiene un vértice de grado $2k$.
+\end{enumerate}
+
+\item Demostrar que la siguiente gráfica $G$ no es una gráfica de intervalos:
+\begin{itemize}
+\item $V(G)=\{P,Q,R,S,T,U\}$
+\item $A(G) = \{\{P,Q\},\{Q,R\},\{R,P\},\{Q,S\},\{S,T\},\{T,Q\},\{R,T\},\{T,U\},\{U,R\}\}$
+\end{itemize}
+
+\item Demostrar que si $G$ es una gráfica conexa de orden mayor que uno entonces
+\begin{itemize}
+\item $1 \leq c(G-\{v\}) \leq d_G(v)$ para cualquier $v \in V(G)$.
+\item $1 \leq c(G\setminus \{a\}) \leq 2$ para cualquier $a \in A(G)$.
+\end{itemize}
+
+
+\item Demostrar que toda gráfica puede expresarse como una suma de gráficas conexas.
+
+%EXAMEN
+%\item Demostrar que si $G$ es una gráfica en la que para todo $v \in V(G)$ se tiene que $ 2 \leq d_G(v)$ entonces $G$ contiene un ciclo.
+
+%EXAMEN
+%\item Demostrar que si $G$ es una gráfica donde $|V(G)| \leq |A(G)|$ entonces $G$ contiene un ciclo.
+
+\item Demostrar que si $G$ es una gráfica donde $2 \leq \delta(G)$ entonces $G$ contiene un ciclo de longitud al menos $\delta(G)+1$.
+
+\item Demostrar que las siguientes afirmaciones son equivalentes para una gráfica conexa $G$ de orden al menos tres:
+\begin{itemize}
+\item $G$ es un bloque\footnote{$G$ es un \textbf{bloque} si y solamente si $G$ es una gráfica conexa sin vértices de corte.}.
+\item Para cualquier $\{u,v\} \subseteq V(G)$ con $u \neq v$ existe un ciclo $C$ en $G$ tal que $\{u,v\} \subset V(C)$.
+\item Para cualquier $u \in V(G)$  y $a \in A(G)$  existe un ciclo $C$ en $G$ tal que $u \in V(C)$ y $a \in A(C)$.
+\item Para cualquier $\{a,b\} \subseteq A(G)$ con $a \neq b$ existe un ciclo $C$ en $G$ tal que $\{a,b\} \subset A(C)$.
+\end{itemize}
+
+
+\item Demostrar que si $G$ es un bloque tal que $3 \leq |V(G)|$, $\{u,v\}\subseteq V(G)$ tal que $v \neq u$ y $T_{uv}$ es una trayectoria en $G$ con extremos $u$ y $v$ entonces existe una trayectoria $T_{uv}^{*}$ con extremos $u$ y $v$ tal que $V(T_{uv}) \cap V(T_{uv}^*) = \{u,v\}$.
+
+\item Sea $G$ una gráfica con cuatro bloques tal que $V(G)=\{v_1,v_2,v_3,v_4,v_5,v_6,v_7, v_8\}$. Demostrar que si para cualquier $1\leq i \leq 6$ se tiene que $v_i$ pertenece a exactamente un bloque de $G$ y que $v_7$ y $v_8$ pertenecen exactamente a dos bloques de $G$ entonces $G$ es disconexa.
+
+\item Demostrar que si $v \in V(G)$ es vértice de corte en $G$ entonces $v$ no es vértice de corte en $\overline{G}$
+
+\item Sea $G$ una gráfica conexa con al menos un vértice de corte. Demostrar que $G$ contiene, por lo menos, dos bloques cada uno de los cuales contiene exactamente un vértice de corte de $G$\footnote{Los bloques de una gráfica que contienen exactamente un vértice de corte de dicha gráfica se llaman \textbf{bloques terminales de $G$}}.
+
+\item Sea $G$ una gráfica conexa con al menos un vértice de corte. Demostrar que $G$ contiene un vértice de corte $v$ con la propiedad de que, con a lo más una excepción, todos los bloques que contienen a $v$ son bloques terminales.
+
+\item Demostrar que si $G$ es una gráfica que no contiene ciclos pares entonces todo bloque de $G$ es isomorfo a $K_2$ o es un ciclo impar.
+
+\item Demostrar que el número de bloques de una gráfica $G$ es igual a
+$$c(G)+ \sum_{v\in V(G)}(b(v)-1)$$
+donde $b(v)$ denota al número de bloques de $G$ que contienen a $v$.
+
+\item Demostrar que si $G$ es una gráfica conexa con exactamente dos vértices que no son vértices de corte entonces $G$ es una trayectoria.
+
+\item Demostrar que en cualquier gráfica $G$ si $a\in A(G)$ entonces $c(G) \leq c(G \setminus \{a\}) \leq c(G)+1$.
+
+
+
+\end{enumerate}
+
+\end{document}
