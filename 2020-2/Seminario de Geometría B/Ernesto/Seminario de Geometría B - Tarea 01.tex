@@ -1,0 +1,92 @@
+\documentclass[12pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-2cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Seminario de Geometría B}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Marzo 2020}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 01}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para al Evaluación Parcial 01}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large FECHA DE EVALUACIÓN PARCIAL 01 \\ VIERNES 03-MARZO-2020\\ 12:00 HORAS}}
+\end{center}
+
+\textbf{Instrucciones}: Resolver y enviar por correo electrónico a ambos profesores la siguiente lista de ejercicios. Argumentar detalladamente todos los resultados.
+
+\vspace{1cm}
+
+
+\begin{center}
+\textcolor{blue}{\textbf{\large LISTA DE EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+\item Definir el concepto de orientación de manera que la reflexión por cualquier recta en el plano sea una isometría que invierte la orientación.
+
+\item Determinar el conjunto de puntos fijos de una reflexión, una rotación, una traslación y un deslizamiento.
+
+\item Con los resultados de los ejercicios anteriores, clasificar al conjunto de isometrías de acuerdo al conjunto de puntos fijos y si preservan o invierten la orientación. Expresar ducha clasificación en una tabla.
+
+\item Sean $\{x, y\}\subseteq \mathbb{R}^2$ con $x \neq y$. Demostrar que existe una traslación, una reflexión, una rotación y un deslizamiento de manera que la imagen de $x$ bajo éstas isometrías es $y$\footnote{Esto muestra que el grupo de las isometrías actúa transitivamente en el plano euclideano}. ¿Es única la traslación, la reflexión, la rotación y el deslizamiento con dicha propiedad?. En caso de que no, indicar cuántas hay.
+
+\item Demostrar que $\forall f\in Iso(\E^2)$ existe $g \in Stab_{Iso(\E^2)}((0,0))$ y $t_u \in T(E^2)$ tal que $f= t_u \circ g$.
+
+\item Dar una biyección entre $Stab_{Iso(\E^2)}((0,0))$ y el conjunto $S^2 \times Z_2$.
+
+\item Demostrar que existe una función biyectiva $\varphi: Iso(\E^2) \to S^2 \times Z_2 \times R^2$.
+
+\item Encontrar una operación $*$ en $S^2 \times Z_2 \times R^2$ tal que 
+$$(Iso(\E^2), \circ, Id_{Iso(\E^2)}) \cong( S^2 \times Z_2 \times R^2, *, e)$$
+donde $e$ es el elemento neutro de $S^2 \times Z_2 \times R^2$ con respecto a $*$
+
+
+\end{enumerate}
+
+\end{document}
