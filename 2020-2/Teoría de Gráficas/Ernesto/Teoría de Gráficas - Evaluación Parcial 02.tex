@@ -1,44 +1,17 @@
 \documentclass[12pt]{report}
 
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amscd}
-\usepackage{amsthm}
+\usepackage{amssymb,amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,mexico]{babel}
-\usepackage{enumerate}
-\usepackage[usenames]{color}
-\numberwithin{section}{chapter}
-
-\usepackage{pgf,tikz}
-\usetikzlibrary{arrows}
-
-\usepackage{multicol}
-
-\usepackage{graphicx}
-\usepackage{subfigure}
-
-\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
-\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
-
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
-citecolor=green]{hyperref}
-
-\voffset=-2cm
-\hoffset=-2cm
-\textwidth = 18cm
-\textheight= 23 cm
 
 \usepackage{iwona}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[RE,LO]{\bfseries{Teoría de Gráficas}}
-\fancyhead[LE,RO]{\bfseries{2020-2}}
-\fancyfoot[RE,RO]{\bfseries{Marzo 2020}}
-\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 02}}
 
-\newcommand{\N}{\mathbb N}
+\voffset=-3cm
+\hoffset=-3cm
+\textwidth=19 cm
+\textheight=26 cm
+
+\newcommand{\R}{\mathbb R}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\E}{\mathbb E}
 \newcommand{\s}{\mathbb S}
@@ -49,25 +22,36 @@ citecolor=green]{hyperref}
 \newcommand{\I}{\mathbb I}
 \newcommand{\A}{\mathbb A}
 
-
 \begin{document}
-\begin{center}
-\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 02}}\\
-\vspace{0.5 cm}
-\textcolor{red}{\textbf{\large FECHA DE EVALUACIÓN PARCIAL 02 \\ VIERNES 03-ABRIL-2020\\ 12:00 HORAS}}
-\end{center}
-
-\textbf{Instrucciones}: La siguiente lista que fungirá como guía para el segundo examen parcial, se recomienda resolver todos los ejercicios de la misma.
-
-\vspace{1cm}
-
 
 \begin{center}
-\textcolor{blue}{\textbf{\large LISTA DE EJERCICIOS}}
+\textbf{\LARGE {TEORÍA DE GRÁFICAS}}
 \end{center}
 
+\begin{center}
+\textbf{{\large 2020-2 (02 abril 2020)}}
+\end{center}
+
+\begin{center}
+\textbf{{\large EXAMEN PARCIAL 02}}
+\end{center}
+
+{\bf INSTRUCCIONES:} 
+\begin{itemize}
+\item Justificar y argumentar todos los resultados que se realicen.
+\item 
+
+De no haber recibido un correo electrónico por parte de los profesores argumentando que se ha obtenido el \textbf{Derecho a Examen}, no se considerará a revisión 
+\item Resolver y enviar por correo electrónico, a ambos profesores, \textbf{cinco} de los siguientes ejercicios. De entregar mas de cinco ejercicios, se evaluarán todos los ejercicios pero no se considerará para el promedio el ejercicio de mayor puntaje.
+\item La fecha límite de envío del examen p
+\end{itemize}
+
+\begin{center}
+\rule[0mm]{20cm}{0.2mm}
+\end{center}
 
 \begin{enumerate}
+
 \item 
 \begin{enumerate}
 \item Demostrar que toda gráfica autocomplementaria\footnote{$G$ es una gráfica \textbf{autocomplementaria} si y solamente si $G \cong \overline G$.} es conexa.
@@ -112,11 +96,12 @@ citecolor=green]{hyperref}
 \item Para cualquier $\{a,b\} \subseteq A(G)$ con $a \neq b$ existe un ciclo $C$ en $G$ tal que $\{a,b\} \subset A(C)$.
 \end{itemize}
 
-
+%%%SI
 \item Demostrar que si $G$ es un bloque tal que $3 \leq |V(G)|$, $\{u,v\}\subseteq V(G)$ tal que $v \neq u$ y $T_{uv}$ es una trayectoria en $G$ con extremos $u$ y $v$ entonces existe una trayectoria $T_{uv}^{*}$ con extremos $u$ y $v$ tal que $V(T_{uv}) \cap V(T_{uv}^*) = \{u,v\}$.
 
 \item Sea $G$ una gráfica con cuatro bloques tal que $V(G)=\{v_1,v_2,v_3,v_4,v_5,v_6,v_7, v_8\}$. Demostrar que si para cualquier $1\leq i \leq 6$ se tiene que $v_i$ pertenece a exactamente un bloque de $G$ y que $v_7$ y $v_8$ pertenecen exactamente a dos bloques de $G$ entonces $G$ es disconexa.
 
+%%% SÍ
 \item Demostrar que si $v \in V(G)$ es vértice de corte en $G$ entonces $v$ no es vértice de corte en $\overline{G}$
 
 \item Sea $G$ una gráfica conexa con al menos un vértice de corte. Demostrar que $G$ contiene, por lo menos, dos bloques cada uno de los cuales contiene exactamente un vértice de corte de $G$\footnote{Los bloques de una gráfica que contienen exactamente un vértice de corte de dicha gráfica se llaman \textbf{bloques terminales de $G$}}.
@@ -129,12 +114,16 @@ citecolor=green]{hyperref}
 $$c(G)+ \sum_{v\in V(G)}(b(v)-1)$$
 donde $b(v)$ denota al número de bloques de $G$ que contienen a $v$.
 
+%%%SÍ
 \item Demostrar que si $G$ es una gráfica conexa con exactamente dos vértices que no son vértices de corte entonces $G$ es una trayectoria.
 
 \item Demostrar que en cualquier gráfica $G$ si $a\in A(G)$ entonces $c(G) \leq c(G \setminus \{a\}) \leq c(G)+1$.
 
 
-
 \end{enumerate}
+
+
+\vspace{2cm}
+
 
 \end{document}
