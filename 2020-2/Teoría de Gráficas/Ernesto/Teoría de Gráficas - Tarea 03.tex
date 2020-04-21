@@ -1,0 +1,122 @@
+\documentclass[10pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-3cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Teoría de Gráficas}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Abril 2020}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 03}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 03}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large FECHA DE EVALUACIÓN PARCIAL 03 \\ JUEVES 30-ABRIL-2020\\ 12:00 HORAS}}
+\end{center}
+
+\textbf{Instrucciones}: 
+\begin{itemize}
+\item Desde el momento de la publicación de esta lista y hasta el \textbf{Martes 28 de abril de 2020 a las 12:00 horas} recibiremos via correo electrónico cualquier duda que tengan al respecto y, de ser necesario, pueden agendar una cita para comunicarnos via {\it Skype} con alguno de los profesores, para aclarar cualquier duda que surja sobre esta tarea o sobre la teoría que comprende la evaluación.
+
+\item \textbf{Derecho a examen}:
+\begin{itemize}
+\item Deberán enviar via correo electrónico, a ambos profesores del curso, \textbf{dos de los ejercicios de esta guía} a libre elección.
+
+\item Los ejercicios se revisarán y se enviarán al autor de los mismos ya revisados y con comentarios. De no estar correctos, deberán corregirlos para obtener el visto bueno de sus resultados.
+
+\item Solamente al tener el visto bueno de todos sus ejercicios tendrán derecho a presentar el tercer examen parcial. La fecha límite para enviar a revisión los ejercicios es el \textbf{Martes 28 de abril de 2020 a las 12:00 horas}.
+\end{itemize}
+
+\item \textbf{Examen parcial}:
+\begin{itemize}
+\item El tercer examen parcial se publicará en la página del curso el \textbf{Miércoles 29 de abril de 2020 a las 12:00 horas}, deberán resolverlo y enviar sus resultados via correo electrónico a ambos profesores a más tardar el \textbf{Jueves 30 de abril de 2020 a las 12:00 horas}.
+
+\item De no haber recibido un correo electrónico por parte de los profesores argumentando que se ha obtenido el \textbf{Derecho a Examen}, no se considerará a revisión cualquier archivo que se envíe como \textbf{Examen Parcial 03}.
+\end{itemize}
+\end{itemize}
+
+\vspace{1cm}
+
+
+\begin{center}
+\textcolor{blue}{\textbf{\large LISTA DE EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+\item Demostrar que si $G$ es una gráfica en la que para todo $v \in V(G)$ se tiene que $ 2 \leq d_G(v)$ entonces $G$ contiene un ciclo.
+
+%EXAMEN
+%\item Demostrar que si $G$ es una gráfica en la que $|V(G)| \leq |A(G)|$ entonces $G$ contiene un ciclo.
+
+\item Demostrar que si $G$ es un árbol con exactamente dos hojas entonces $G$ es una trayectoria.
+
+%EXAMEN
+%\item Demostrar que si $G$ es un árbol tal que $k \leq \Delta(G)$ entonces $G$ tiene al menos $k$ hojas.
+
+\item Demostrar que las siguientes proposiciones son equivalentes:
+\begin{itemize}
+\item $G$ es una gráfica conexa con $|V(G)|-1 = |A(G)|$.
+\item $G$ es un bosque con $|V(G)|-1 = |A(G)|$.
+\item $G$ es un árbol.
+\end{itemize}
+
+%EXAMEN
+%\item Demostrar que $G$ es un bosque si y solamente si $|A(G)| = |V(G)|-cc(G)$.
+
+\item Demostrar que si $G$ es un árbol entonces tiene un centro o dos centros que son adyacentes\footnote{Sea $G$ una gráfica. Definimos, para cualquier $v \in V(G)$, $\mathbb{A}_v = \{ k \in \mathbb N \; | \; k = d_G(v,x) \text{ con } x \in V(G)\}$ y sea $a_v = \max(\mathbb A_v)$.
+
+$v \in V(G)$ es un \textbf{centro de $G$} si y solamente si $v$ es un vértice que satisface con ser el vértice de $G$ que representa al $\min(\{ a_v \in \mathbb N \; | \; v \in V(G) \})$}.
+
+%EXAMEN
+%\item Demostrar que una gráfica es conexa si y solamente si tiene un árbol generador.
+
+%EXAMEN
+%\item Demostrar que todo árbol es una gráfica bipartita.
+
+\end{enumerate}
+
+\end{document}
