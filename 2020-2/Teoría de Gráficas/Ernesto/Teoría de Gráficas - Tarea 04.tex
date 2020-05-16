@@ -1,0 +1,123 @@
+\documentclass[10pt]{report}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\numberwithin{section}{chapter}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{multicol}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usetikzlibrary{knots,hobby,decorations.pathreplacing,shapes.geometric,calc}
+\tikzset{knot diagram/every strand/.append style={ultra thick,red}, show curve controls/.style={postaction=decorate, decoration={show path construction, curveto code={\draw [blue, dashed](\tikzinputsegmentfirst) -- (\tikzinputsegmentsupporta) node [at end, draw, solid, red, inner sep=2pt]{}; \draw [blue, dashed] (\tikzinputsegmentsupportb) -- (\tikzinputsegmentlast) node [at start, draw, solid, red, inner sep=2pt]{} node [at end, fill, blue, ellipse, inner sep=2pt]{};}}}, show curve endpoints/.style={ postaction=decorate, decoration={show path construction, curveto code={\node [fill, blue, ellipse, inner sep=2pt] at (\tikzinputsegmentlast) {};}}}}
+
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red,
+citecolor=green]{hyperref}
+
+\voffset=-2cm
+\hoffset=-3cm
+\textwidth = 18cm
+\textheight= 23 cm
+
+\usepackage{iwona}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\bfseries{Teoría de Gráficas}}
+\fancyhead[LE,RO]{\bfseries{2020-2}}
+\fancyfoot[RE,RO]{\bfseries{Mayo 2020}}
+\fancyfoot[LE,LO]{\bfseries{Evaluación Parcial 04}}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+
+\begin{document}
+\begin{center}
+\textcolor{blue}{\textbf{\large Guía de ejercicios para la Evaluación Parcial 04}}\\
+\vspace{0.5 cm}
+\textcolor{red}{\textbf{\large FECHA DE EVALUACIÓN PARCIAL 04 \\ VIERNES 29-MAYO-2020\\ 12:00 HORAS}}
+\end{center}
+
+\textbf{Instrucciones}: 
+\begin{itemize}
+\item Desde el momento de la publicación de esta lista y hasta el \textbf{Miércoles 27 de mayo de 2020 a las 12:00 horas} recibiremos via correo electrónico cualquier duda que tengan al respecto y, de ser necesario, pueden agendar una cita para comunicarnos via {\it Skype} con alguno de los profesores, para aclarar cualquier duda que surja sobre esta tarea o sobre la teoría que comprende la evaluación.
+
+\item \textbf{Derecho a examen}:
+\begin{itemize}
+\item Deberán enviar via correo electrónico, a ambos profesores del curso, \textbf{cuatro de los ejercicios de esta guía} a libre elección.
+
+\item Los ejercicios se revisarán y se enviarán al autor de los mismos ya revisados y con comentarios. De no estar correctos, deberán corregirlos para obtener el visto bueno de sus resultados.
+
+\item Solamente al tener el visto bueno de todos sus ejercicios tendrán derecho a presentar el tercer examen parcial. La fecha límite para enviar a revisión los ejercicios es el \textbf{Miércoles 27 de mayo de 2020 a las 12:00 horas}.
+\end{itemize}
+
+\item \textbf{Examen parcial}:
+\begin{itemize}
+\item El cuarto examen parcial se publicará en la página del curso el \textbf{Jueves 28 de mayo de 2020 a las 12:00 horas}, deberán resolverlo y enviar sus resultados via correo electrónico a ambos profesores a más tardar el \textbf{Viernes 29 de mayo de 2020 a las 12:00 horas}.
+
+\item De no haber recibido un correo electrónico por parte de los profesores argumentando que se ha obtenido el \textbf{Derecho a Examen}, no se considerará a revisión cualquier archivo que se envíe como \textbf{Examen Parcial 04}.
+\end{itemize}
+\end{itemize}
+
+\vspace{1cm}
+
+
+\begin{center}
+\textcolor{blue}{\textbf{\large LISTA DE EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+\item Dada $k \in \N \setminus \{0\}$, encontrar una gráfica $G$ que sea $k$-conexa puntualmente en el que el conjunto de corte desconecte a $G$ en más de dos componentes conexas.
+
+\item Demostrar que si $G$ es una gráfica tal que $|V(G)|-2 \leq \delta(G)$ entonces $\kappa(G) < \delta(G)$.
+
+\item Demostrar que si $G$ es una gráfica en la que $\frac{|V(G)|+k-2}{2} \leq \delta(G)$ entonces $G$ es $k$-conexa puntualmente.
+
+%%%EXAMEN
+%\item Demostrar que si $G$ es una gráfica $k$-conexa puntualmente entonces $G+K_1$ es una gráfica $(k+1)$-conexa puntualmente.
+
+\item Demostrar que si $G$ es una gráfica $k$-conexa linealmente ($k \in \N \setminus \{0\}$) y $A \subseteq A(G)$ tal que $|A| =k$ entonces $c(G\setminus A) \leq 2$.
+
+%%%EXAMEN
+%\item Demostrar que si $G$ es una gráfica $k$-conexa linealmente entonces $ k |V(G)| \leq 2 |A(G)|$.
+
+\item Demostrar que si $G$ es una gráfica en la que $|V(G)| \leq \delta(G)+2$ entonces $\lambda(G) = \delta(G)$.
+
+%%%EXAMEN
+%\item Encontrar una gráfica $G$ tal que $\left[\frac{|V(G)|-2}{2}\right] = \delta(G)$ y $\lambda(G) < \delta(G)$.
+
+\item Demostrar que si $G$ es una gráfica $3$-regular entonces $\kappa(G) = \lambda(G)$.
+
+\item Sean $\{a,b,c\} \subseteq \N \setminus \{0\}$, tales que $a \leq b \leq c$. Construir una gráfica $G$ tal que $\kappa(G) =a$, $\lambda (G) = b$ y $\delta(G) =c$.
+
+%%%EXAMEN
+%\item Construir una gráfica $G$ tal que $\kappa(G) =3$, $\lambda (G) = 4$ y $\delta(G) =5$.
+
+\item Demostrar que si $G$ es una gráfica $k$-regular y $\kappa(G)=1$ entonces $\lambda(G) \leq \left[ \frac{k}{2}\right]$\footnote{Se define, para cualquier $x \in \R$, $[x] := \max(\{z \in \Z \; | \; z \leq x\})$.}.
+
+
+\end{enumerate}
+
+\end{document}
