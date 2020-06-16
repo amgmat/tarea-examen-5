@@ -1,0 +1,94 @@
+\documentclass[11pt]{report}
+
+\usepackage{amssymb,amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+
+\usepackage{iwona}
+
+\voffset=-3cm
+\hoffset=-2.5cm
+\textwidth=18 cm
+\textheight=24 cm
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\s}{\mathbb S}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\T}{\mathbb T}
+\newcommand{\p}{\mathbb P}
+\newcommand{\I}{\mathbb I}
+\newcommand{\A}{\mathbb A}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\textbf{\LARGE {TEORÍA DE GRÁFICAS}}
+\end{center}
+
+\begin{center}
+\textbf{{\large 2020-2 (17 junio 2020)}}
+\end{center}
+
+\begin{center}
+\textbf{{\large EXAMEN FINAL}}
+\end{center}
+
+{\bf INSTRUCCIONES:}
+\begin{itemize}
+\item Justificar y argumentar todos los resultados que se realicen.
+
+\item Resolver y enviar por correo electrónico, en formato \textit{PDF}, a ambos profesores los siguientes ejercicios resueltos.
+
+\item La fecha límite de envío del \textbf{Examen Final} es el
+\begin{center}
+\textbf{Miércoles 17 de junio de 2020 a las 16:00 horas}
+\end{center}
+No se considerará a revisión cualquier archivo que se envíe como \textbf{Examen Final} después de esta fecha y horario.
+
+\end{itemize}
+
+\begin{center}
+\rule[0mm]{20cm}{0.2mm}
+\end{center}
+
+\begin{enumerate}
+\item Sea $n \in \N \setminus \{0\}$, considerar las siguientes gráficas:
+\begin{itemize}
+\item $Q_n = (V(Q_n), A(Q_n))$ donde $X=\{0,1\}$ y
+\begin{itemize}
+\item $V(Q_n) = X^n $
+\item $\{x,y\} \in A(Q_n) \Leftrightarrow$ $x$ difiere de $y$ en exactamente una coordenada. 
+\end{itemize}
+
+\item $B_n = (V(B_n), A(B_n))$ donde $X=\{m \in \N \setminus \{0\} \; | \; 1 \leq m \leq n\}$ y
+\begin{itemize}
+\item $V(B_n) = \wp(X) $
+\item $\{x,y\} \in A(B_n) \Leftrightarrow$ $|x \triangle y|=1$.\footnote{$x \triangle y = (x \setminus y) \cup (y \setminus x)$}
+\end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\item Demostrar que para cualquier $n \in \N \setminus \{0\}$, $Q_n \cong B_n$.
+\item Determinar el orden y el tamaño de $Q_n$ para toda $n \in \N \setminus \{0\}$.
+\item Demostrar que para toda $n \in \N \setminus \{0\}$ se tiene que $B_n$ es bipartita.
+\end{enumerate}
+
+\item Demostrar que toda gráfica autocomplementaria con $4k+1$ vértices tiene un vértice de grado $2k$.
+
+\item Demostrar que si $v \in V(G)$ es vértice de corte en $G$ entonces $v$ no es vértice de corte en $\overline{G}$.
+
+\item Demostrar que si $G$ es un árbol entonces tiene un centro o dos centros que son adyacentes\footnote{Sea $G$ una gráfica. Definimos, para cualquier $v \in V(G)$, $\mathbb{A}_v = \{ k \in \mathbb N \; | \; k = d_G(v,x) \text{ con } x \in V(G)\}$ y sea $a_v = \max(\mathbb A_v)$.
+
+$v \in V(G)$ es un \textbf{centro de $G$} si y solamente si $v$ es un vértice que satisface con ser el vértice de $G$ que representa al $\min(\{ a_v \in \mathbb N \; | \; v \in V(G) \})$}.
+
+\item Demostrar que si $G$ es una gráfica $3$-regular entonces $\kappa(G) = \lambda(G)$.
+
+\end{enumerate}
+
+\end{document}
